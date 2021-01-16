@@ -1,0 +1,43 @@
+name: "distill-personalwebsite"
+title: "Javier Orraca"
+description: |
+  Data science and business analytics personal website.
+output_dir: "_site"
+navbar:
+  search: true
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "Scatter Podcast"
+      menu:
+        - text: "SoundCloud"
+          href: https://soundcloud.com/scatterpodcast
+        - text: "Spotify"
+          href: https://open.spotify.com/show/64UpJwByrdsrLSYObuEeHx?si=uZChaWIhSxukmDQbvPm4Uw
+        - text: "Apple Podcasts"
+          href: https://podcasts.apple.com/us/podcast/scatter-podcast/id1458544194
+        - text: "Google Podcasts"
+          href: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjYxMzk3MzAyMi9zb3VuZHMucnNz
+        - text: "TuneIn"
+          href: http://tun.in/pjpsF
+        - text: "Sticher Radio"
+          href: https://www.stitcher.com/show/httpssoundcloudcomscatterpodcast
+    - text: "R Resources"
+      href: resources.html
+    - text: "About"
+      href: about.html
+    - icon: fab fa-soundcloud
+      href: https://soundcloud.com/scatterpodcast
+    - icon: fab fa-linkedin
+      href: https://www.linkedin.com/in/orraca/
+    - icon: fab fa-github
+      href: https://github.com/JavOrraca
+base_url: https://www.javierorraca.com/
+google_analytics: "UA-127790709-3"
+collections:
+  posts:
+    creative_commons: CC BY
+output: distill::distill_article
+theme: theme.css
+rss:
+  full_content: TRUE
