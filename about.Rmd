@@ -8,7 +8,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ![Tulum, Quintana Roo, Mexico - The second happiest place on Earth, after Disneyland](./images/Javier.jpg)
 
-My name is Javier Orraca and I'm data scientist. I enjoy building predictive models, developing web applications, cooking, reading, and playing board games. For a living, I get to solve puzzles with data - Life is good.
+My name is Javier Orraca and I'm a data scientist. I enjoy building predictive models, developing web applications, cooking, reading, and playing board games. For a living, I get to solve puzzles with data - Life is good.
 
 ## Professional
 
