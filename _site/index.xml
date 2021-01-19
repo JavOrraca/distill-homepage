@@ -12,8 +12,7 @@
       <title>Hadley Wickham on SuperDataScience Podcast</title>
       <dc:creator>Javier Orraca</dc:creator>
       <link>https://www.javierorraca.com/posts/2020-02-04-Hadley-Wickham-on-SDS-Podcast</link>
-      <description>&lt;p&gt;My eyes were opened to the world of analytics and data science in part through Kirill Eremenko and his amazing SuperDataScience podcast.&lt;/p&gt;
-</description>
+      <description>My eyes were opened to the world of analytics and data science in part through Kirill Eremenko and his amazing SuperDataScience podcast.</description>
       <category>RStudio</category>
       <category>SuperDataScience</category>
       <guid>https://www.javierorraca.com/posts/2020-02-04-Hadley-Wickham-on-SDS-Podcast</guid>
@@ -24,8 +23,7 @@
       <title>Resampling with k-fold Cross Validation</title>
       <dc:creator>Javier Orraca</dc:creator>
       <link>https://www.javierorraca.com/posts/2020-02-01-k-fold-cross-validation</link>
-      <description>&lt;p&gt;Click for a high-level recap of k-fold cross  validation as a resampling method.&lt;/p&gt;
-</description>
+      <description>Click for a high-level recap of k-fold cross  validation as a resampling method.</description>
       <category>Statistics</category>
       <category>Machine Learning</category>
       <category>R</category>
@@ -37,8 +35,7 @@
       <title>An Algorithm for Better Espresso</title>
       <dc:creator>Javier Orraca</dc:creator>
       <link>https://www.javierorraca.com/posts/2020-01-22-Systematically-Improving-Coffee</link>
-      <description>&lt;p&gt;Coffee lovers&amp;hellip; You might find this study  fascinating. Finally, a model for the perfect  cup of espresso!.&lt;/p&gt;
-</description>
+      <description>Coffee lovers... You might find this study  fascinating. Finally, a model for the perfect  cup of espresso!.</description>
       <category>Statistics</category>
       <category>Coffee</category>
       <guid>https://www.javierorraca.com/posts/2020-01-22-Systematically-Improving-Coffee</guid>
@@ -49,8 +46,7 @@
       <title>Analyzing Earthquakes in Puerto Rico</title>
       <dc:creator>Javier Orraca</dc:creator>
       <link>https://www.javierorraca.com/posts/2020-01-20-Puerto-Rico-Earthquakes</link>
-      <description>&lt;p&gt;Puerto Rico has been experiencing atypical  seismic activity since November 2019.&lt;/p&gt;
-</description>
+      <description>Puerto Rico has been experiencing atypical  seismic activity since November 2019.</description>
       <category>Statistics</category>
       <category>ggplot2</category>
       <category>Earthquakes</category>
@@ -62,8 +58,7 @@
       <title>Create Your Own R Package</title>
       <dc:creator>Javier Orraca</dc:creator>
       <link>https://www.javierorraca.com/posts/2020-01-18-Create-R-Packages</link>
-      <description>&lt;p&gt;If you are interested in developing your own R packages, this thorough A-to-Z tutorial resource is one to bookmark.&lt;/p&gt;
-</description>
+      <description>If you are interested in developing your own R packages, this thorough A-to-Z tutorial resource is one to bookmark.</description>
       <category>R</category>
       <category>Packages</category>
       <category>Development</category>
@@ -75,8 +70,7 @@
       <title>Writing to Excel from R</title>
       <dc:creator>Javier Orraca</dc:creator>
       <link>https://www.javierorraca.com/posts/2020-01-09-Writing-to-Excel-from-R</link>
-      <description>&lt;p&gt;Spending your days R but working closely with analysts  and leadership that live in Excel? Get familiar with openxlsx.&lt;/p&gt;
-</description>
+      <description>Spending your days R but working closely with analysts  and leadership that live in Excel? Get familiar with openxlsx.</description>
       <category>R</category>
       <category>Packages</category>
       <guid>https://www.javierorraca.com/posts/2020-01-09-Writing-to-Excel-from-R</guid>
@@ -87,8 +81,7 @@
       <title>California Consumer Privacy Act</title>
       <dc:creator>Javier Orraca</dc:creator>
       <link>https://www.javierorraca.com/posts/2020-01-04-CCPA</link>
-      <description>&lt;p&gt;The California Consumer Privacy Act is set to go into effect on January 1, 2020. The CCPA, similar in nature to GDPR, will provide California residents with new consumer data rights.&lt;/p&gt;
-</description>
+      <description>The California Consumer Privacy Act is set to go into effect on January 1, 2020. The CCPA, similar in nature to GDPR, will provide California residents with new consumer data rights.</description>
       <category>Privacy</category>
       <guid>https://www.javierorraca.com/posts/2020-01-04-CCPA</guid>
       <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
@@ -98,8 +91,7 @@
       <title>Holiday Expectations vs Reality</title>
       <dc:creator>Javier Orraca</dc:creator>
       <link>https://www.javierorraca.com/posts/2020-01-01-Holidays</link>
-      <description>&lt;p&gt;Holiday expectations&amp;hellip;&lt;/p&gt;
-</description>
+      <description>Holiday expectations...</description>
       <category>Gaming</category>
       <guid>https://www.javierorraca.com/posts/2020-01-01-Holidays</guid>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
@@ -109,8 +101,7 @@
       <title>Ubuntu Update to 19.10</title>
       <dc:creator>Javier Orraca</dc:creator>
       <link>https://www.javierorraca.com/posts/2019-12-31-Ubuntu-Update</link>
-      <description>&lt;p&gt;Things not to do with Linux, learned the hard way, as we approach the end of 2019&amp;hellip;&lt;/p&gt;
-</description>
+      <description>Things not to do with Linux, learned the hard way, as we approach the end of 2019...</description>
       <category>Linux</category>
       <category>Ubuntu</category>
       <guid>https://www.javierorraca.com/posts/2019-12-31-Ubuntu-Update</guid>
@@ -121,8 +112,7 @@
       <title>Book Rec: Hands-On Machine Learning with R</title>
       <dc:creator>Javier Orraca</dc:creator>
       <link>https://www.javierorraca.com/posts/2019-12-17-Hands-On-Machine-Learning-with-R</link>
-      <description>&lt;p&gt;Digging into Hands-On Machine Learning with R by Brad Boehmke, PhD, and Brandon Greenwell.&lt;/p&gt;
-</description>
+      <description>Digging into Hands-On Machine Learning with R by Brad Boehmke, PhD, and Brandon Greenwell.</description>
       <category>Machine Learning</category>
       <category>R</category>
       <category>Packages</category>
@@ -134,8 +124,7 @@
       <title>Spreading Joy with Java Joy</title>
       <dc:creator>Javier Orraca</dc:creator>
       <link>https://www.javierorraca.com/posts/2019-12-15-Java-Joy</link>
-      <description>&lt;p&gt;Bay Area friends&amp;hellip; Next time your organization needs coffee for an event, quarterly meeting, all-hands, or lunch and learn, reach out to Java Joy!&lt;/p&gt;
-</description>
+      <description>Bay Area friends... Next time your organization needs coffee for an event, quarterly meeting, all-hands, or lunch and learn, reach out to Java Joy!</description>
       <category>Social Good</category>
       <guid>https://www.javierorraca.com/posts/2019-12-15-Java-Joy</guid>
       <pubDate>Sun, 15 Dec 2019 00:00:00 +0000</pubDate>
@@ -145,8 +134,7 @@
       <title>Education Reform and Lessons from Finland</title>
       <dc:creator>Javier Orraca</dc:creator>
       <link>https://www.javierorraca.com/posts/2019-12-04-Finland-Education-System</link>
-      <description>&lt;p&gt;Quartz and Google&amp;#39;s Avinash Kaushik share insights comparing national education systems, test performance, and time spent on learning..&lt;/p&gt;
-</description>
+      <description>Quartz and Google's Avinash Kaushik share insights comparing national education systems, test performance, and time spent on learning..</description>
       <category>Education</category>
       <guid>https://www.javierorraca.com/posts/2019-12-04-Finland-Education-System</guid>
       <pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate>
@@ -156,8 +144,7 @@
       <title>Building a Website with Blogdown</title>
       <dc:creator>Javier Orraca</dc:creator>
       <link>https://www.javierorraca.com/posts/2019-11-18-Blogdown</link>
-      <description>&lt;p&gt;Learn how to build and deploy a website with R, blogdown, GitHub, Hugo, and Netlify.&lt;/p&gt;
-</description>
+      <description>Learn how to build and deploy a website with R, blogdown, GitHub, Hugo, and Netlify.</description>
       <category>Development</category>
       <category>Packages</category>
       <category>R</category>
@@ -170,8 +157,7 @@
       <title>15 Tips for Making Better Use of R</title>
       <dc:creator>Javier Orraca</dc:creator>
       <link>https://www.javierorraca.com/posts/2019-11-11-R-Markown</link>
-      <description>&lt;p&gt;If you are an R user not using R Markdown, these tricks could be helpful for you.&lt;/p&gt;
-</description>
+      <description>If you are an R user not using R Markdown, these tricks could be helpful for you.</description>
       <category>R</category>
       <category>R Markdown</category>
       <guid>https://www.javierorraca.com/posts/2019-11-11-R-Markown</guid>
@@ -182,8 +168,7 @@
       <title>Shiny Developer Expert Course</title>
       <dc:creator>Javier Orraca</dc:creator>
       <link>https://www.javierorraca.com/posts/2019-11-05-R-Shiny-Expert-Course</link>
-      <description>&lt;p&gt;Matt Dancho and Business Science introduce a new R Shiny Expert Developer course.&lt;/p&gt;
-</description>
+      <description>Matt Dancho and Business Science introduce a new R Shiny Expert Developer course.</description>
       <category>Shiny</category>
       <category>R</category>
       <guid>https://www.javierorraca.com/posts/2019-11-05-R-Shiny-Expert-Course</guid>
@@ -194,8 +179,7 @@
       <title>Visual &amp; Data Journalism at BBC</title>
       <dc:creator>Javier Orraca</dc:creator>
       <link>https://www.javierorraca.com/posts/2019-10-22-BBC-Visualization-Journey-with-R</link>
-      <description>&lt;p&gt;The BBC News data science and visualization team published this great overview on their analytics and visualizations lessons learned over the course of 1.5 years.&lt;/p&gt;
-</description>
+      <description>The BBC News data science and visualization team published this great overview on their analytics and visualizations lessons learned over the course of 1.5 years.</description>
       <category>ggplot2</category>
       <category>R</category>
       <category>Visualizations</category>
@@ -207,8 +191,7 @@
       <title>Information is Beautiful 2019 Awards</title>
       <dc:creator>Javier Orraca</dc:creator>
       <link>https://www.javierorraca.com/posts/2019-10-19-Information-is-Beautiful-Awards</link>
-      <description>&lt;p&gt;Visualization professionals present their best at the annual Information is Beautiful Awards show.&lt;/p&gt;
-</description>
+      <description>Visualization professionals present their best at the annual Information is Beautiful Awards show.</description>
       <category>Visualizations</category>
       <guid>https://www.javierorraca.com/posts/2019-10-19-Information-is-Beautiful-Awards</guid>
       <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
