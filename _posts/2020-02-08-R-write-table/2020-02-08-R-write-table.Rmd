@@ -1,0 +1,28 @@
+---
+title: "Copy R Objects to Clipboard"
+description: > 
+  I was today years old when I learned that you could
+  easily copy/paste R objects to your clipboard. 
+author:
+  - name: Javier Orraca
+    affiliation: Scatter Podcast
+date: 02-08-2020
+categories:
+  - R
+  - Quick Tips
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+preview: images/carbon.png
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+```
+
+You learn something new every day, even basics! For R users on Windows (I'm assuming the same holds true for Mac and Linux users), do you ever find yourself needing to quickly export a dataframe or tibble to Excel or a text editor? I recently discovered base R's `write.table` function and have used it much more often than I anticipated.
+
+See below syntax as an example:
+
+![base R's write.table](./images/carbon.png)

@@ -40,6 +40,8 @@ R and Julia are open-source programming languages for statistical computing and 
 
 * [Official Manual](https://docs.julialang.org/en/v1/manual/getting-started/): I'm in the process of reading through this documentation to better understand the Julia methods, operators, functions, function-building, and modules
 * [Learning Materials](https://julialang.org/learning/): Many resources are listed here on the official Julia Lang site
+* [Juno](https://junolab.org/): An Atom-based flexible IDE for Julia
+* [Installation Instructions](http://docs.junolab.org/latest/man/installation/): Install Julia, Atom, and Juno
 * [Genie](https://genieframework.com/): This library is a full-stack web framework for modern web apps using Julia
 * Medium articles on Julia that interested me:
   * [First Impressions of Julia from an R User](https://mdneuzerling.com/post/first-impressions-of-julia-from-an-r-user/)

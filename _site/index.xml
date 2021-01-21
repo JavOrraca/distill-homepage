@@ -7,7 +7,114 @@
     <description>Data science and business analytics personal website.
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 04 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>One-Hour R Package Development Tutorial by Shannon Pileggi, PhD</title>
+      <dc:creator>Javier Orraca</dc:creator>
+      <link>https://www.javierorraca.com/posts/2020-12-19-R-Package-One-Hour-Tutorial</link>
+      <description>I followed this tutorial and created a package successfully. It took 45 minutes. Follow, this, guide, my fellow R friends!</description>
+      <category>R</category>
+      <category>Packages</category>
+      <category>Tutorial</category>
+      <guid>https://www.javierorraca.com/posts/2020-12-19-R-Package-One-Hour-Tutorial</guid>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.javierorraca.com/posts/2020-12-19-R-Package-One-Hour-Tutorial/images/package_workshop.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>What's New in dbplyr 2.0.0</title>
+      <dc:creator>Javier Orraca</dc:creator>
+      <link>https://www.javierorraca.com/posts/2020-11-04-dbplyr-2.0.0</link>
+      <description>dbplyr, a database backend for dplyr, just released  v2.0.0 today... Awesome stuff here!</description>
+      <category>RStudio</category>
+      <category>tidyverse</category>
+      <category>Packages</category>
+      <category>R</category>
+      <category>SQL</category>
+      <guid>https://www.javierorraca.com/posts/2020-11-04-dbplyr-2.0.0</guid>
+      <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.javierorraca.com/posts/2020-11-04-dbplyr-2.0.0/images/dbplyr_what_is_new.jpg_large" medium="image" type="text/plain"/>
+    </item>
+    <item>
+      <title>Detailed R Package Development Tutorial from Method Bites</title>
+      <dc:creator>Javier Orraca</dc:creator>
+      <link>https://www.javierorraca.com/posts/2020-09-13-R-Package-Detailed-Tutorial</link>
+      <description>This is one of the best, most detailed, how-to  guides for developing your own R package from A-to-Z</description>
+      <category>Packages</category>
+      <category>R</category>
+      <category>Tutorial</category>
+      <guid>https://www.javierorraca.com/posts/2020-09-13-R-Package-Detailed-Tutorial</guid>
+      <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.javierorraca.com/posts/2020-09-13-R-Package-Detailed-Tutorial/images/methods_bites.png" medium="image" type="image/png" width="1037" height="1200"/>
+    </item>
+    <item>
+      <title>Shiny Voice-Activated input</title>
+      <dc:creator>Javier Orraca</dc:creator>
+      <link>https://www.javierorraca.com/posts/2020-07-03-Shiny-Voice-Input</link>
+      <description>Want to make your Shiny apps voice-interactive? Now it's possible.</description>
+      <category>Shiny</category>
+      <category>R</category>
+      <category>Packages</category>
+      <guid>https://www.javierorraca.com/posts/2020-07-03-Shiny-Voice-Input</guid>
+      <pubDate>Fri, 03 Jul 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.javierorraca.com/posts/2020-07-03-Shiny-Voice-Input/images/shiny_logo.png" medium="image" type="image/png" width="860" height="414"/>
+    </item>
+    <item>
+      <title>Testing dplyr 1.0.0</title>
+      <dc:creator>Javier Orraca</dc:creator>
+      <link>https://www.javierorraca.com/posts/2020-06-20-dplyr-1.0.0</link>
+      <description>Finally getting around to trying out dplyr 1.0.0... Love it!</description>
+      <category>Packages</category>
+      <category>R</category>
+      <category>tidyverse</category>
+      <guid>https://www.javierorraca.com/posts/2020-06-20-dplyr-1.0.0</guid>
+      <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Lying with Statistics</title>
+      <dc:creator>Javier Orraca</dc:creator>
+      <link>https://www.javierorraca.com/posts/2020-04-19-Police-Killings</link>
+      <description>It's quite easy to manipulate raw data in a manner that "proves" your point. For the sake of exploring this topic further, I'll analyze police killing data and present it in three different ways.</description>
+      <category>Statistics</category>
+      <category>ggplot2</category>
+      <category>R</category>
+      <guid>https://www.javierorraca.com/posts/2020-04-19-Police-Killings</guid>
+      <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.javierorraca.com/posts/2020-04-19-Police-Killings/images/Police_Killings_1.jpeg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>D&amp;D Adventures + blogdown</title>
+      <dc:creator>Javier Orraca</dc:creator>
+      <link>https://www.javierorraca.com/posts/2020-04-05-DnD-Adventures</link>
+      <description>It's an incredible time to be creative! I've recently been re-learning Dungeons &amp; Dragons with a group of  friends and having so much fun in the process.</description>
+      <category>Gaming</category>
+      <category>blogdown</category>
+      <guid>https://www.javierorraca.com/posts/2020-04-05-DnD-Adventures</guid>
+      <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.javierorraca.com/posts/2020-04-05-DnD-Adventures/images/Dnd.png" medium="image" type="image/png" width="1446" height="612"/>
+    </item>
+    <item>
+      <title>themis: Extra Steps for tidymodels + recipes</title>
+      <dc:creator>Javier Orraca</dc:creator>
+      <link>https://www.javierorraca.com/posts/2020-02-20-Themis</link>
+      <description>themis contain extra steps for the recipes package for dealing with unbalanced data. The name themis is that of the ancient Greek goddess who is typically depicted with a balance.</description>
+      <category>R</category>
+      <category>tidymodels</category>
+      <category>Packages</category>
+      <guid>https://www.javierorraca.com/posts/2020-02-20-Themis</guid>
+      <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.javierorraca.com/posts/2020-02-20-Themis/images/themis.png" medium="image" type="image/png" width="2828" height="2472"/>
+    </item>
+    <item>
+      <title>Copy R Objects to Clipboard</title>
+      <dc:creator>Javier Orraca</dc:creator>
+      <link>https://www.javierorraca.com/posts/2020-02-08-R-write-table</link>
+      <description>I was today years old when I learned that you could easily copy/paste R objects to your clipboard.</description>
+      <category>R</category>
+      <category>Quick Tips</category>
+      <guid>https://www.javierorraca.com/posts/2020-02-08-R-write-table</guid>
+      <pubDate>Sat, 08 Feb 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.javierorraca.com/posts/2020-02-08-R-write-table/images/carbon.png" medium="image" type="image/png" width="2692" height="1968"/>
+    </item>
     <item>
       <title>Hadley Wickham on SuperDataScience Podcast</title>
       <dc:creator>Javier Orraca</dc:creator>
@@ -75,7 +182,7 @@
       <category>Packages</category>
       <guid>https://www.javierorraca.com/posts/2020-01-09-Writing-to-Excel-from-R</guid>
       <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
-      <media:content url="https://www.javierorraca.com/posts/2020-01-09-Writing-to-Excel-from-R/images/openxlsx.jpg" medium="image" type="image/jpeg"/>
+      <media:content url="https://www.javierorraca.com/posts/2020-01-09-Writing-to-Excel-from-R/images/openxlsx.png" medium="image" type="image/png" width="3636" height="1248"/>
     </item>
     <item>
       <title>California Consumer Privacy Act</title>

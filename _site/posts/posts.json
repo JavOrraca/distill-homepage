@@ -1,5 +1,204 @@
 [
   {
+    "path": "posts/2020-12-19-R-Package-One-Hour-Tutorial/",
+    "title": "One-Hour R Package Development Tutorial by Shannon Pileggi, PhD",
+    "description": "I followed this tutorial and created a package successfully. It took 45 minutes. Follow, this, guide, my fellow R friends!",
+    "author": [
+      {
+        "name": "Javier Orraca",
+        "url": {}
+      }
+    ],
+    "date": "2020-12-19",
+    "categories": [
+      "R",
+      "Packages",
+      "Tutorial"
+    ],
+    "contents": "\nPackage development should be on every R programmer’s radar in 2021, especially with all the free information available online! Here’s an excellent, concise, ultra-bookmark-worthy tutorial by Shannon Pileggi, PhD, titled “Your first R package in 1 hour”. Folks, she wasn’t lying either. I followed her tutorial and built an R package in roughly 45 minutes (note: I assume you have experience with the R language and understand the basics of devtools, usethis, roxygen2, and rmarkdown).\nUsing functions from just the devtools and usethis packages, the whole process is much more streamlined than what I would have thought. Check out the rest of Shannon’s Piping Hot Data website as well… It’s a great resource for R programmers and researchers, and she built it with the newly reintroduced distill package, just like this site. :-)\nSource: * Shannon’s Piping Hot Data “Your first R package in 1 hour” post * Shannon’s LinkedIn\n\n\n\n",
+    "preview": "posts/2020-12-19-R-Package-One-Hour-Tutorial/images/package_workshop.jpg",
+    "last_modified": "2021-01-20T22:31:44-08:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2020-11-04-dbplyr-2.0.0/",
+    "title": "What's New in dbplyr 2.0.0",
+    "description": "dbplyr, a database backend for dplyr, just released  v2.0.0 today... Awesome stuff here!",
+    "author": [
+      {
+        "name": "Javier Orraca",
+        "url": {}
+      }
+    ],
+    "date": "2020-11-04",
+    "categories": [
+      "RStudio",
+      "tidyverse",
+      "Packages",
+      "R",
+      "SQL"
+    ],
+    "contents": "\ndbplyr 2.0.0 comes loaded with improvements including the translation of dplyr’s new across() function. If you aren’t familiar with this library, dbplyr translates your dplyr syntax to SQL. I regularly connect to enterprise databases using R and have almost completely transitioned from SQL. Yes, SQL is awesome. Yes, using dplyr is a lot more fun!\n\nSource: * tidyverse blog’s dbplyr 2.0.0 Official Announcement\n\n\n\n",
+    "preview": "posts/2020-11-04-dbplyr-2.0.0/images/dbplyr_what_is_new.jpg_large",
+    "last_modified": "2021-01-20T22:16:49-08:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2020-09-13-R-Package-Detailed-Tutorial/",
+    "title": "Detailed R Package Development Tutorial from Method Bites",
+    "description": "This is one of the best, most detailed, how-to  guides for developing your own R package from A-to-Z",
+    "author": [
+      {
+        "name": "Javier Orraca",
+        "url": {}
+      }
+    ],
+    "date": "2020-09-13",
+    "categories": [
+      "Packages",
+      "R",
+      "Tutorial"
+    ],
+    "contents": "\nI’ll keep this short since all credit should go towards the amazing Cosima Meyer and Dennis Hammerschmidton… They compressed some of the most valuable steps for creating and deploying a package. This duo’s work was published for the MZES Social Science Data Lab. If you want a detailed and easy-to-follow how-to for R package development, bookmark this step-by-step guide!\n\nSource: * Methods Bites: How to write your own R package and publish it on CRAN\n\n\n\n",
+    "preview": "posts/2020-09-13-R-Package-Detailed-Tutorial/images/methods_bites.png",
+    "last_modified": "2021-01-20T22:49:31-08:00",
+    "input_file": {},
+    "preview_width": 1037,
+    "preview_height": 1200
+  },
+  {
+    "path": "posts/2020-07-03-Shiny-Voice-Input/",
+    "title": "Shiny Voice-Activated input",
+    "description": "Want to make your Shiny apps voice-interactive? Now it's possible.",
+    "author": [
+      {
+        "name": "Javier Orraca",
+        "url": {}
+      }
+    ],
+    "date": "2020-07-03",
+    "categories": [
+      "Shiny",
+      "R",
+      "Packages"
+    ],
+    "contents": "\nHey R Shiny users, want to make your Shiny apps voice-interactive? For example, “Click on Product Toy-2A and then drill-down by Region.” Ummm, yes please. Pretty neat stuff made possible with the heyshiny package. “The heyshiny package provides a new Shiny input, the speechInput(). This new input allows your Shiny app to listen to the microphone, recognize the speech, and return it as text.”\nThe main caveat with this package is that it is based on the annyang JavaScript library and therefore requires that 1) you’re online and 2) using a browser that supports speech recognition (I tried this on Chrome and works fine). It’s not on CRAN but check out the GitHub page, below. Here’s an example if you’re getting set up, pulled from their GitHub repo:\n\nSource: * heyshiny on GitHub\n\n\n\n",
+    "preview": "posts/2020-07-03-Shiny-Voice-Input/images/shiny_logo.png",
+    "last_modified": "2021-01-20T22:46:40-08:00",
+    "input_file": {},
+    "preview_width": 860,
+    "preview_height": 414
+  },
+  {
+    "path": "posts/2020-06-20-dplyr-1.0.0/",
+    "title": "Testing dplyr 1.0.0",
+    "description": "Finally getting around to trying out dplyr 1.0.0... Love it!",
+    "author": [
+      {
+        "name": "Javier Orraca",
+        "url": {}
+      }
+    ],
+    "date": "2020-06-20",
+    "categories": [
+      "Packages",
+      "R",
+      "tidyverse"
+    ],
+    "contents": "\nI had read about the new across() function hype and now I get it… No more mutate_at() or summarise_at() with the cryptic list-lambdas. As the dplyr documentation states, “across() supersedes the family of”scoped variants\" like summarise_at(), summarise_if(), and summarise_all().\"\nBelow is an example highlighting the new across() syntax meant to be used within a mutate() function. I tried this on a few columns of the mtcars data set with dplyr’s case_when() a la SQL CASE_WHEN (as opposed to nesting multiple if_else() statements to the point of confusion!). The dplyr changes are subtle but will definitely streamline my data wrangling.\ndplyr 1.0.0’s new across() functionSource: * dplyr, a core tidyverse package\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-01-20T23:07:36-08:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2020-04-19-Police-Killings/",
+    "title": "Lying with Statistics",
+    "description": "It's quite easy to manipulate raw data in a manner that \"proves\" your point. For the sake of exploring this topic further, I'll analyze police killing data and present it in three different ways.",
+    "author": [
+      {
+        "name": "Javier Orraca",
+        "url": {}
+      }
+    ],
+    "date": "2020-04-19",
+    "categories": [
+      "Statistics",
+      "ggplot2",
+      "R"
+    ],
+    "contents": "\nLets explore four plots and see how we can #LieWithStatistics…\nPlot 1: Police killings by date, by race General observation: Police kill more white people than black people\nPlot 2: Police killing boxplot showing murder rates, by race, by police department General explanation and takeaway: The dots on each boxplot show the statistical outliers, box plot lines extend out to the “min” and “max”, and the box lines (from bottom to top of each box) represent the first quartile (25th percentile), median (50th percentile), and third quartile (75th percentile)\nPlot 3: Police killing boxplot, now log-transforming the murder rates to more easily identify statistical differences, by race General explanation and takeaway: Log-transforming data points for visualization or modeling purposes is a technique by which you can smooth observed data making it more robust (or resistant) to outliers. I effectively re-wrote the murder rates to show exponential relativity. Important caveat: Are Native Americans more likely to die by police than other races? Sure looks like it… but see Plot 4 for more thoughts\nPlot 4: Police killing boxplot, now log-transforming the murder rates using a log base 10 (easier interpretability) and “fixing” the Native American data points causing a misleading assumption in Plot 3, i.e., Native American death rates appeared much higher than others in Plot 3 given the fact that log(0) = 1. General takeaway: There were such few Native American data points that log-transforming all of the zeroes was unintentionally bastardizing the analysis. It would appear black people are almost an order of magnitude more likely to be killed by police than white people.\nI do not seek to answer questions of “why” systemic injustice exists in the US, but I wanted to analyze police killing data and share these dialectical investigations.\nSource: * Samuel Sinyangwe & the Mapping Police Violence team\n\n\n\n",
+    "preview": "posts/2020-04-19-Police-Killings/images/Police_Killings_1.jpeg",
+    "last_modified": "2021-01-20T21:43:52-08:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2020-04-05-DnD-Adventures/",
+    "title": "D&D Adventures + blogdown",
+    "description": "It's an incredible time to be creative! I've recently been re-learning Dungeons & Dragons with a group of  friends and having so much fun in the process.",
+    "author": [
+      {
+        "name": "Javier Orraca",
+        "url": {}
+      }
+    ],
+    "date": "2020-04-05",
+    "categories": [
+      "Gaming",
+      "blogdown"
+    ],
+    "contents": "\nWizards of the Coast have developed such an incredible tabletop, fantasy, RPG with the 5th edition of D&D… I wish I would have re-discovered this game years back. For context, I haven’t touched D&D since 1997!\nIf you know of good resources for newbies and new D&D Dungeon Masters (“DMs”), I’d love to know about your favorite resources. For data science folks out there, this site was built with R using blogdown, Hugo themes, and deployed for free using GitHub and Netlify.\nD&D dragon looking for troubleReference:  * Javier’s D&D Adventures\n\n\n\n",
+    "preview": "posts/2020-04-05-DnD-Adventures/images/Dnd.png",
+    "last_modified": "2021-01-20T13:09:33-08:00",
+    "input_file": {},
+    "preview_width": 1446,
+    "preview_height": 612
+  },
+  {
+    "path": "posts/2020-02-20-Themis/",
+    "title": "themis: Extra Steps for tidymodels + recipes",
+    "description": "themis contain extra steps for the recipes package for dealing with unbalanced data. The name themis is that of the ancient Greek goddess who is typically depicted with a balance.",
+    "author": [
+      {
+        "name": "Javier Orraca",
+        "url": {}
+      }
+    ],
+    "date": "2020-02-20",
+    "categories": [
+      "R",
+      "tidymodels",
+      "Packages"
+    ],
+    "contents": "\nWorking with unbalanced data sets? Remember that accuracy, alone, is not the best performance metric (especially when dealing with unbalanced data). Instead, place more importance on Cohen’s kappa coefficient, F1 harmonic mean, or focus on improving your model’s specificity or sensitivity, etc.\nI’ve been transitioning a lot of my workflows to the tidymodels framework and I am super excited about the future of tidymodels (recipes + parsnip + dials + tune + workflow + more 😭✊🙌). If you’re using recipes often like me, a new library called {themis}, by Emil Hvitfeldt expands the {recipes} pre-processing steps for working with unbalanced data sets (it adds functionality for under- and hybrid-sampling techniques). I love me some smote, and now I can incorporate this sampling technique into my recipes with themis::step_smote()!\n# Installation\ninstall.packages(\"themis\")\n\n# Example workflow\nlibrary(recipes)\nlibrary(modeldata)\nlibrary(themis)\n\ndata(okc)\n\nsort(table(okc$Class, useNA = \"always\"))\n#> \n#>  <NA>  stem other \n#>     0  9539 50316\n\nds_rec <- recipe(Class ~ age + height, data = okc) %>%\n  step_meanimpute(all_predictors()) %>%\n  step_smote(Class) %>%\n  prep()\n\nsort(table(bake(ds_rec, new_data = NULL)$Class, useNA = \"always\"))\n#> \n#>  <NA>  stem other \n#>     0 50316 50316\nSource: * themis * themis on GitHub\n\n\n\n",
+    "preview": "posts/2020-02-20-Themis/images/themis.png",
+    "last_modified": "2021-01-19T21:33:28-08:00",
+    "input_file": {},
+    "preview_width": 2828,
+    "preview_height": 2472
+  },
+  {
+    "path": "posts/2020-02-08-R-write-table/",
+    "title": "Copy R Objects to Clipboard",
+    "description": "I was today years old when I learned that you could easily copy/paste R objects to your clipboard.",
+    "author": [
+      {
+        "name": "Javier Orraca",
+        "url": {}
+      }
+    ],
+    "date": "2020-02-08",
+    "categories": [
+      "R",
+      "Quick Tips"
+    ],
+    "contents": "\nYou learn something new every day, even basics! For R users on Windows (I’m assuming the same holds true for Mac and Linux users), do you ever find yourself needing to quickly export a dataframe or tibble to Excel or a text editor? I recently discovered base R’s write.table function and have used it much more often than I anticipated.\nSee below syntax as an example:\nbase R’s write.table\n\n\n",
+    "preview": "posts/2020-02-08-R-write-table/images/carbon.png",
+    "last_modified": "2021-01-19T21:05:27-08:00",
+    "input_file": {},
+    "preview_width": 2692,
+    "preview_height": 1968
+  },
+  {
     "path": "posts/2020-02-04-Hadley-Wickham-on-SDS-Podcast/",
     "title": "Hadley Wickham on SuperDataScience Podcast",
     "description": "My eyes were opened to the world of analytics and data science in part through Kirill Eremenko and his amazing SuperDataScience podcast.",
@@ -117,10 +316,12 @@
       "R",
       "Packages"
     ],
-    "contents": "\nopenxlsx is an awesome package for writing multiple datasets to multiple sheets of an Excel workbook, and allows for robust styling and cell formatting. I found a tutorial on RPubs written by Ezekiel Adebayo Ogundepo covering this package that I often use at work. Definitely bookmark worthy.\nLinks:\nEzekiel’s openxlsx tutorial on RPubs\nopenxlsx repository on GitHub\n\n\n\n",
-    "preview": "posts/2020-01-09-Writing-to-Excel-from-R/images/openxlsx.jpg",
-    "last_modified": "2021-01-18T21:31:43-08:00",
-    "input_file": {}
+    "contents": "\nopenxlsx is an awesome package for writing multiple datasets to multiple sheets of an Excel workbook, and allows for robust styling and cell formatting. I found a tutorial on RPubs written by Ezekiel Adebayo Ogundepo covering this package that I often use at work. Definitely bookmark worthy.\nHere is a high-level code example:\nlibrary(openxlsx)\n\n# Name the Excel worksheets where you want to export data to\nlist_of_datasets <- list(\"Overall Summary\" = df_1, \"LOB Summary\" = df_2, \"Details\" = df_3)\n\n# Save the Excel workbook to your wd with your worksheet list and name the Excel file\nwrite.xlsx(list_of_datasets, \"Excel_Workbook_2017.01.20.xlsx\")\nLinks:\nEzekiel’s openxlsx tutorial on RPubs\nopenxlsx repository on GitHub\n\n\n\n",
+    "preview": "posts/2020-01-09-Writing-to-Excel-from-R/images/openxlsx.png",
+    "last_modified": "2021-01-20T13:08:48-08:00",
+    "input_file": {},
+    "preview_width": 3636,
+    "preview_height": 1248
   },
   {
     "path": "posts/2020-01-04-CCPA/",
