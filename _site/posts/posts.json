@@ -1,5 +1,49 @@
 [
   {
+    "path": "posts/2021-01-19-rsthemes/",
+    "title": "{rsthemes}: Customizing Your RStudio IDE",
+    "description": "Change up your editor theme with {rsthemes},  a collection of themes to freshen up the  RStudio IDE aesthetics.",
+    "author": [
+      {
+        "name": "Javier Orraca",
+        "url": {}
+      }
+    ],
+    "date": "2021-01-19",
+    "categories": [
+      "RStudio",
+      "Packages",
+      "R"
+    ],
+    "contents": "\nFeel like freshening up your RStudio IDE? Check out the rsthemes package by Garrick Aden-Buie to explore and apply different themes. For the last year or so, I’ve been enjoying the “base16 Ashes” theme at work and home. I prefer the “One Dark” theme on Atom / Juno for my Julia setup, But I’m starting to feel like I should use “One Dark” across the board. 🤓\nThis package is not yet on CRAN, so you’ll have to install via devtools::install_github(). See installation and usage code below, pulled from the rsthemes GitHub:\n## INSTALLATION\n# Instructions assume devtools is installed)\ndevtools::install_github(\"gadenbuie/rsthemes\")\n\n# Install custom themes + additional set of base16-based themes\nrsthemes::install_rsthemes(include_base16 = TRUE)\n\n## USAGE\n# list installed themes\nrsthemes::list_rsthemes()\n\n# Try all themes\nrsthemes::try_rsthemes()\n\n# Try just the light, dark, or base16 themes, e.g.\nrsthemes::try_rsthemes(\"light\")\n\n# Use a theme\nrstudioapi::applyTheme(\"One Dark {rsthemes}\")\nSource: * rsthemes on GitHub * base16 themes\n\n\n\n",
+    "preview": "posts/2021-01-19-rsthemes/images/rsthemes.gif",
+    "last_modified": "2021-01-22T21:28:29-08:00",
+    "input_file": "2021-01-19-rsthemes.utf8.md"
+  },
+  {
+    "path": "posts/2020-12-31-Raspberry-Pi/",
+    "title": "Preparing for 2021 Goals with a Raspberry Pi",
+    "description": "I have been planning my 2021 goals and the Raspberry Pi 4 will help me kill a few birds with one stone.",
+    "author": [
+      {
+        "name": "Javier Orraca",
+        "url": {}
+      }
+    ],
+    "date": "2020-12-31",
+    "categories": [
+      "Julia",
+      "Linux",
+      "Raspberry Pi"
+    ],
+    "contents": "\nKilling a few birds with one stone and getting ready for 2021… 1) Getting better at Linux / shell commands,  2) Learning Julia (see my Resources tab for some great Julia starter links!),  3) Doing it all on a Raspberry Pi 😜 Happy holidays and Happy New Years to all!\nBelow are some pics of my current progress.\nRaspberry Pi 4, Model B, 8GB RAM, & Super Cute Tiny Heat SinksEnclosing the Pi 4 in a CanaKit case + fanRaspberry Pi OS, a Debian distro for the PiJupyter Lab server on the Pi set up w/ Python, R, and Julia\n\n\n",
+    "preview": "posts/2020-12-31-Raspberry-Pi/images/Pi-banner.png",
+    "last_modified": "2021-01-22T20:57:54-08:00",
+    "input_file": {},
+    "preview_width": 1200,
+    "preview_height": 630
+  },
+  {
     "path": "posts/2020-12-19-R-Package-One-Hour-Tutorial/",
     "title": "One-Hour R Package Development Tutorial by Shannon Pileggi, PhD",
     "description": "I followed this tutorial and created a package successfully. It took 45 minutes. Follow, this, guide, my fellow R friends!",
@@ -106,8 +150,8 @@
       "tidyverse"
     ],
     "contents": "\nI had read about the new across() function hype and now I get it… No more mutate_at() or summarise_at() with the cryptic list-lambdas. As the dplyr documentation states, “across() supersedes the family of”scoped variants\" like summarise_at(), summarise_if(), and summarise_all().\"\nBelow is an example highlighting the new across() syntax meant to be used within a mutate() function. I tried this on a few columns of the mtcars data set with dplyr’s case_when() a la SQL CASE_WHEN (as opposed to nesting multiple if_else() statements to the point of confusion!). The dplyr changes are subtle but will definitely streamline my data wrangling.\ndplyr 1.0.0’s new across() functionSource: * dplyr, a core tidyverse package\n\n\n\n",
-    "preview": {},
-    "last_modified": "2021-01-20T23:07:36-08:00",
+    "preview": "posts/2020-06-20-dplyr-1.0.0/images/dplyr.jpeg",
+    "last_modified": "2021-01-22T20:59:09-08:00",
     "input_file": {}
   },
   {

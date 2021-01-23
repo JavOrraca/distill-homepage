@@ -1,0 +1,54 @@
+---
+title: "{rsthemes}: Customizing Your RStudio IDE"
+description: > 
+  Change up your editor theme with {rsthemes}, 
+  a collection of themes to freshen up the 
+  RStudio IDE aesthetics.
+author:
+  - name: Javier Orraca
+    affiliation: Scatter Podcast
+date: 01-19-2021
+categories:
+  - RStudio
+  - Packages
+  - R
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+preview: images/rsthemes.gif
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+```
+
+Feel like freshening up your RStudio IDE? Check out the `rsthemes` package by [Garrick Aden-Buie](https://www.linkedin.com/in/garrick-aden-buie/) to explore and apply different themes. For the last year or so, I've been enjoying the "base16 Ashes" theme at work and home. I prefer the "One Dark" theme on Atom / Juno for my Julia setup, But I'm starting to feel like I should use "One Dark" across the board. 🤓
+
+This package is not yet on CRAN, so you'll have to install via `devtools::install_github()`. See installation and usage code below, pulled from the `rsthemes` GitHub:
+
+```r
+## INSTALLATION
+# Instructions assume devtools is installed)
+devtools::install_github("gadenbuie/rsthemes")
+
+# Install custom themes + additional set of base16-based themes
+rsthemes::install_rsthemes(include_base16 = TRUE)
+
+## USAGE
+# list installed themes
+rsthemes::list_rsthemes()
+
+# Try all themes
+rsthemes::try_rsthemes()
+
+# Try just the light, dark, or base16 themes, e.g.
+rsthemes::try_rsthemes("light")
+
+# Use a theme
+rstudioapi::applyTheme("One Dark {rsthemes}")
+```
+
+Source:<br>
+* [rsthemes on GitHub](https://github.com/gadenbuie/rsthemes)
+<br>* [base16 themes](http://chriskempson.com/projects/base16/) 

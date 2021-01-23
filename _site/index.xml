@@ -7,7 +7,57 @@
     <description>Data science and business analytics personal website.
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 19 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>{rsthemes}: Customizing Your RStudio IDE</title>
+      <dc:creator>Javier Orraca</dc:creator>
+      <link>https://www.javierorraca.com/posts/2021-01-19-rsthemes</link>
+      <description>
+
+
+&lt;p&gt;Feel like freshening up your RStudio IDE? Check out the &lt;code&gt;rsthemes&lt;/code&gt; package by &lt;a href="https://www.linkedin.com/in/garrick-aden-buie/"&gt;Garrick Aden-Buie&lt;/a&gt; to explore and apply different themes. For the last year or so, I’ve been enjoying the “base16 Ashes” theme at work and home. I prefer the “One Dark” theme on Atom / Juno for my Julia setup, But I’m starting to feel like I should use “One Dark” across the board. 🤓&lt;/p&gt;
+&lt;p&gt;This package is not yet on CRAN, so you’ll have to install via &lt;code&gt;devtools::install_github()&lt;/code&gt;. See installation and usage code below, pulled from the &lt;code&gt;rsthemes&lt;/code&gt; GitHub:&lt;/p&gt;
+&lt;pre class="r"&gt;&lt;code&gt;## INSTALLATION
+# Instructions assume devtools is installed)
+devtools::install_github(&amp;quot;gadenbuie/rsthemes&amp;quot;)
+
+# Install custom themes + additional set of base16-based themes
+rsthemes::install_rsthemes(include_base16 = TRUE)
+
+## USAGE
+# list installed themes
+rsthemes::list_rsthemes()
+
+# Try all themes
+rsthemes::try_rsthemes()
+
+# Try just the light, dark, or base16 themes, e.g.
+rsthemes::try_rsthemes(&amp;quot;light&amp;quot;)
+
+# Use a theme
+rstudioapi::applyTheme(&amp;quot;One Dark {rsthemes}&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Source:&lt;br&gt; * &lt;a href="https://github.com/gadenbuie/rsthemes"&gt;rsthemes on GitHub&lt;/a&gt; &lt;br&gt;* &lt;a href="http://chriskempson.com/projects/base16/"&gt;base16 themes&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+      <distill:md5>0cf78105abc95d80ccb26d074d783796</distill:md5>
+      <category>RStudio</category>
+      <category>Packages</category>
+      <category>R</category>
+      <guid>https://www.javierorraca.com/posts/2021-01-19-rsthemes</guid>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.javierorraca.com/posts/2021-01-19-rsthemes/images/rsthemes.gif" medium="image" type="image/gif"/>
+    </item>
+    <item>
+      <title>Preparing for 2021 Goals with a Raspberry Pi</title>
+      <dc:creator>Javier Orraca</dc:creator>
+      <link>https://www.javierorraca.com/posts/2020-12-31-Raspberry-Pi</link>
+      <description>I have been planning my 2021 goals and the Raspberry Pi 4 will help me kill a few birds with one stone.</description>
+      <category>Julia</category>
+      <category>Linux</category>
+      <category>Raspberry Pi</category>
+      <guid>https://www.javierorraca.com/posts/2020-12-31-Raspberry-Pi</guid>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.javierorraca.com/posts/2020-12-31-Raspberry-Pi/images/Pi-banner.png" medium="image" type="image/png" width="1200" height="630"/>
+    </item>
     <item>
       <title>One-Hour R Package Development Tutorial by Shannon Pileggi, PhD</title>
       <dc:creator>Javier Orraca</dc:creator>
@@ -68,6 +118,7 @@
       <category>tidyverse</category>
       <guid>https://www.javierorraca.com/posts/2020-06-20-dplyr-1.0.0</guid>
       <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.javierorraca.com/posts/2020-06-20-dplyr-1.0.0/images/dplyr.jpeg" medium="image" type="image/jpeg"/>
     </item>
     <item>
       <title>Lying with Statistics</title>
