@@ -2156,7 +2156,7 @@ html {
   /*-- Main font sizes --*/
   --title-size:      50px;
   --body-size:       1.06rem;
-  --code-size:       12px;
+  --code-size:       13px;
   --aside-size:      12px;
   --fig-cap-size:    13px;
   /*-- Main font colors --*/
@@ -2197,7 +2197,7 @@ d-appendix {
 /*-- WEBSITE HEADER + FOOTER --*/
 /* These properties only apply to Distill sites and blogs  */
 
-.background {background-color:#b0c4de; !important}
+.background {background-color:#b0c4de;!important}
 
 .distill-site-header {
   --title-size:       28px;
@@ -2216,6 +2216,25 @@ d-appendix {
   --text-size:        15px;
   --hover-color:      white;
   --bkgd-color:       #365180;
+}
+
+/*-- Additional custom styles --*/
+/* Add any additional CSS rules below                      */
+
+/* Change the appearance of in-line code chunks */
+
+code {
+ font-family: "Montserrat", sans-serif;
+ color: #365180;
+ background: #f0f3f9;
+ font-weight: 400;
+ font-size: 0.9em;
+}
+
+/*CHANGE CODE CHUNK COLORS */
+
+d-article pre{
+  background: #f0f3f9;
 }
 
 /* Change link appearance */

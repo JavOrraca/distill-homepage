@@ -1,5 +1,5 @@
 ---
-title: "{rsthemes}: Customizing Your RStudio IDE"
+title: "rsthemes: Customizing your RStudio IDE"
 description: > 
   Change up your editor theme with {rsthemes}, 
   a collection of themes to freshen up the 
@@ -27,7 +27,7 @@ Feel like freshening up your RStudio IDE? Check out the `rsthemes` package by [G
 
 This package is not yet on CRAN, so you'll have to install via `devtools::install_github()`. See installation and usage code below, pulled from the `rsthemes` GitHub:
 
-```r
+```{r, eval=FALSE}
 ## INSTALLATION
 # Instructions assume devtools is installed)
 devtools::install_github("gadenbuie/rsthemes")
@@ -49,6 +49,8 @@ rsthemes::try_rsthemes("light")
 rstudioapi::applyTheme("One Dark {rsthemes}")
 ```
 
-Source:<br>
+Source:
+
 * [rsthemes on GitHub](https://github.com/gadenbuie/rsthemes)
-<br>* [base16 themes](http://chriskempson.com/projects/base16/) 
+
+* [base16 themes](http://chriskempson.com/projects/base16/) 

@@ -7,38 +7,25 @@
     <description>Data science and business analytics personal website.
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 19 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 Jan 2021 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>{rsthemes}: Customizing Your RStudio IDE</title>
+      <title>rstudio::global(2021) tips, tricks, and more</title>
+      <dc:creator>Javier Orraca</dc:creator>
+      <link>https://www.javierorraca.com/posts/2021-01-22-rstudio-global</link>
+      <description>RStudio's annual conference saw roughly 15,000 attendees for  their first global, all-virtual, 24-hour event. I attended several sessions throughout the day and I'll highlight my favorite data bytes learned that day. I'll also share relatable content for better modeling with R.</description>
+      <category>RStudio</category>
+      <category>Conference</category>
+      <category>tidymodels</category>
+      <category>R</category>
+      <guid>https://www.javierorraca.com/posts/2021-01-22-rstudio-global</guid>
+      <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.javierorraca.com/posts/2021-01-22-rstudio-global/images/rstudio-global-2021.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>rsthemes: Customizing your RStudio IDE</title>
       <dc:creator>Javier Orraca</dc:creator>
       <link>https://www.javierorraca.com/posts/2021-01-19-rsthemes</link>
-      <description>
-
-
-&lt;p&gt;Feel like freshening up your RStudio IDE? Check out the &lt;code&gt;rsthemes&lt;/code&gt; package by &lt;a href="https://www.linkedin.com/in/garrick-aden-buie/"&gt;Garrick Aden-Buie&lt;/a&gt; to explore and apply different themes. For the last year or so, I’ve been enjoying the “base16 Ashes” theme at work and home. I prefer the “One Dark” theme on Atom / Juno for my Julia setup, But I’m starting to feel like I should use “One Dark” across the board. 🤓&lt;/p&gt;
-&lt;p&gt;This package is not yet on CRAN, so you’ll have to install via &lt;code&gt;devtools::install_github()&lt;/code&gt;. See installation and usage code below, pulled from the &lt;code&gt;rsthemes&lt;/code&gt; GitHub:&lt;/p&gt;
-&lt;pre class="r"&gt;&lt;code&gt;## INSTALLATION
-# Instructions assume devtools is installed)
-devtools::install_github(&amp;quot;gadenbuie/rsthemes&amp;quot;)
-
-# Install custom themes + additional set of base16-based themes
-rsthemes::install_rsthemes(include_base16 = TRUE)
-
-## USAGE
-# list installed themes
-rsthemes::list_rsthemes()
-
-# Try all themes
-rsthemes::try_rsthemes()
-
-# Try just the light, dark, or base16 themes, e.g.
-rsthemes::try_rsthemes(&amp;quot;light&amp;quot;)
-
-# Use a theme
-rstudioapi::applyTheme(&amp;quot;One Dark {rsthemes}&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Source:&lt;br&gt; * &lt;a href="https://github.com/gadenbuie/rsthemes"&gt;rsthemes on GitHub&lt;/a&gt; &lt;br&gt;* &lt;a href="http://chriskempson.com/projects/base16/"&gt;base16 themes&lt;/a&gt;&lt;/p&gt;
-&lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
-      <distill:md5>0cf78105abc95d80ccb26d074d783796</distill:md5>
+      <description>Change up your editor theme with {rsthemes},  a collection of themes to freshen up the  RStudio IDE aesthetics.</description>
       <category>RStudio</category>
       <category>Packages</category>
       <category>R</category>

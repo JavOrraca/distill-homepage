@@ -2127,7 +2127,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     /*-- Main font sizes --*/
     --title-size:      50px;
     --body-size:       1.06rem;
-    --code-size:       12px;
+    --code-size:       13px;
     --aside-size:      12px;
     --fig-cap-size:    13px;
     /*-- Main font colors --*/
@@ -2168,7 +2168,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /*-- WEBSITE HEADER + FOOTER --*/
   /* These properties only apply to Distill sites and blogs  */
 
-  .background {background-color:#b0c4de; !important}
+  .background {background-color:#b0c4de;!important}
 
   .distill-site-header {
     --title-size:       28px;
@@ -2187,6 +2187,25 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --text-size:        15px;
     --hover-color:      white;
     --bkgd-color:       #365180;
+  }
+
+  /*-- Additional custom styles --*/
+  /* Add any additional CSS rules below                      */
+
+  /* Change the appearance of in-line code chunks */
+
+  code {
+   font-family: "Montserrat", sans-serif;
+   color: #365180;
+   background: #f0f3f9;
+   font-weight: 400;
+   font-size: 0.9em;
+  }
+
+  /*CHANGE CODE CHUNK COLORS */
+
+  d-article pre{
+    background: #f0f3f9;
   }
 
   /* Change link appearance */
@@ -2349,7 +2368,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.6.6/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />

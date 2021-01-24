@@ -2128,7 +2128,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     /*-- Main font sizes --*/
     --title-size:      50px;
     --body-size:       1.06rem;
-    --code-size:       12px;
+    --code-size:       13px;
     --aside-size:      12px;
     --fig-cap-size:    13px;
     /*-- Main font colors --*/
@@ -2169,7 +2169,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /*-- WEBSITE HEADER + FOOTER --*/
   /* These properties only apply to Distill sites and blogs  */
 
-  .background {background-color:#b0c4de; !important}
+  .background {background-color:#b0c4de;!important}
 
   .distill-site-header {
     --title-size:       28px;
@@ -2188,6 +2188,25 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --text-size:        15px;
     --hover-color:      white;
     --bkgd-color:       #365180;
+  }
+
+  /*-- Additional custom styles --*/
+  /* Add any additional CSS rules below                      */
+
+  /* Change the appearance of in-line code chunks */
+
+  code {
+   font-family: "Montserrat", sans-serif;
+   color: #365180;
+   background: #f0f3f9;
+   font-weight: 400;
+   font-size: 0.9em;
+  }
+
+  /*CHANGE CODE CHUNK COLORS */
+
+  d-article pre{
+    background: #f0f3f9;
   }
 
   /* Change link appearance */
@@ -2350,7 +2369,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.6.6/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2558,6 +2577,28 @@ function init_posts_list() {
 <div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
 <div class="posts-list">
 <h1 class="posts-list-caption" data-caption="Data Science Bytes">Data Science Bytes</h1>
+<a href="posts/2021-01-22-rstudio-global/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["RStudio","Conference","tidymodels","R"]}</script>
+<div class="metadata">
+<div class="publishedDate">Jan. 21, 2021</div>
+<div class="dt-authors">
+<div class="dt-author">Javier Orraca</div>
+</div>
+</div>
+<div class="thumbnail">
+<img src="posts/2021-01-22-rstudio-global/images/rstudio-global-2021.jpg"/>
+</div>
+<div class="description">
+<h2>rstudio::global(2021) tips, tricks, and more</h2>
+<div class="dt-tags">
+<div class="dt-tag">RStudio</div>
+<div class="dt-tag">Conference</div>
+<div class="dt-tag">tidymodels</div>
+<div class="dt-tag">R</div>
+</div>
+<p>RStudio's annual conference saw roughly 15,000 attendees for  their first global, all-virtual, 24-hour event. I attended several sessions throughout the day and I'll highlight my favorite data bytes learned that day. I'll also share relatable content for better modeling with R.</p>
+</div>
+</a>
 <a href="posts/2021-01-19-rsthemes/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":["RStudio","Packages","R"]}</script>
 <div class="metadata">
@@ -2570,7 +2611,7 @@ function init_posts_list() {
 <img src="posts/2021-01-19-rsthemes/images/rsthemes.gif"/>
 </div>
 <div class="description">
-<h2>{rsthemes}: Customizing Your RStudio IDE</h2>
+<h2>rsthemes: Customizing your RStudio IDE</h2>
 <div class="dt-tags">
 <div class="dt-tag">RStudio</div>
 <div class="dt-tag">Packages</div>
@@ -2653,7 +2694,7 @@ function init_posts_list() {
 </div>
 </div>
 <div class="thumbnail">
-<img src="posts/2020-09-13-R-Package-Detailed-Tutorial/images/methods_bites.png"/>
+<img data-src="posts/2020-09-13-R-Package-Detailed-Tutorial/images/methods_bites.png"/>
 </div>
 <div class="description">
 <h2>Detailed R Package Development Tutorial from Method Bites</h2>
@@ -3138,7 +3179,7 @@ function init_posts_list() {
 <ul>
 <li>
 <a href="#category:Articles">Articles</a>
-<span class="category-count">(28)</span>
+<span class="category-count">(29)</span>
 </li>
 <li>
 <a href="#category:blogdown">blogdown</a>
@@ -3150,6 +3191,10 @@ function init_posts_list() {
 </li>
 <li>
 <a href="#category:Coffee">Coffee</a>
+<span class="category-count">(1)</span>
+</li>
+<li>
+<a href="#category:Conference">Conference</a>
 <span class="category-count">(1)</span>
 </li>
 <li>
@@ -3198,7 +3243,7 @@ function init_posts_list() {
 </li>
 <li>
 <a href="#category:R">R</a>
-<span class="category-count">(17)</span>
+<span class="category-count">(18)</span>
 </li>
 <li>
 <a href="#category:R_Markdown">R Markdown</a>
@@ -3210,7 +3255,7 @@ function init_posts_list() {
 </li>
 <li>
 <a href="#category:RStudio">RStudio</a>
-<span class="category-count">(3)</span>
+<span class="category-count">(4)</span>
 </li>
 <li>
 <a href="#category:Shiny">Shiny</a>
@@ -3234,7 +3279,7 @@ function init_posts_list() {
 </li>
 <li>
 <a href="#category:tidymodels">tidymodels</a>
-<span class="category-count">(1)</span>
+<span class="category-count">(2)</span>
 </li>
 <li>
 <a href="#category:tidyverse">tidyverse</a>
