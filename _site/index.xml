@@ -7,19 +7,31 @@
     <description>Data science and business analytics personal website.
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 23 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 24 Jan 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>rstudio::global tips, tricks, and more</title>
       <dc:creator>Javier Orraca</dc:creator>
-      <link>https://www.javierorraca.com/posts/2021-01-23-rstudio-global</link>
+      <link>https://www.javierorraca.com/posts/2021-01-24-rstudio-global</link>
       <description>RStudio's annual conference saw roughly 15,000 attendees for  their first global, all-virtual, 24-hour event. I attended several sessions throughout the day and I'll highlight my favorite data bytes learned that day. I'll also share relatable content for better modeling with R.</description>
       <category>RStudio</category>
       <category>Conference</category>
       <category>tidymodels</category>
       <category>R</category>
-      <guid>https://www.javierorraca.com/posts/2021-01-23-rstudio-global</guid>
-      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://www.javierorraca.com/posts/2021-01-23-rstudio-global/images/rstudio-global-2021.jpg" medium="image" type="image/jpeg"/>
+      <guid>https://www.javierorraca.com/posts/2021-01-24-rstudio-global</guid>
+      <pubDate>Sun, 24 Jan 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.javierorraca.com/posts/2021-01-24-rstudio-global/images/rstudio-global-2021.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>rsthemes: Customizing your RStudio IDE</title>
+      <dc:creator>Javier Orraca</dc:creator>
+      <link>https://www.javierorraca.com/posts/2021-01-19-rsthemes</link>
+      <description>Change up your editor theme with {rsthemes},  a collection of themes to freshen up the  RStudio IDE aesthetics.</description>
+      <category>RStudio</category>
+      <category>Packages</category>
+      <category>R</category>
+      <guid>https://www.javierorraca.com/posts/2021-01-19-rsthemes</guid>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.javierorraca.com/posts/2021-01-19-rsthemes/images/rsthemes.gif" medium="image" type="image/gif"/>
     </item>
     <item>
       <title>Preparing for 2021 Goals with a Raspberry Pi</title>
