@@ -137,7 +137,7 @@ While not perfect, this design spaces the points further away from one another.
 
 Space-filling designs can be very effective at representing the parameter space. The default design used by the `tune` package is the maximum entropy design. These tend to produce grids that cover the candidate space well and drastically increase the chances of finding good results.
 
-To learn more about advanced _iterative search_ methods such as Bayesian optimization and simulated annealing, please visit [Chapter 14 of TWMR](https://www.tmwr.org/iterative-search.html). Max Kuhn covered these advanced techniques during his `tidymodels` rstudio::global event and I haven't had a chance to try these iterative search methods.
+To learn more about advanced _iterative search_ methods such as Bayesian optimization and simulated annealing, please visit [Chapter 14 of TMWR](https://www.tmwr.org/iterative-search.html). Max Kuhn covered these advanced techniques during his `tidymodels` rstudio::global event and I haven't had a chance to try these iterative search methods.
 
 ## usemodels
 
