@@ -21,9 +21,8 @@ I launched [Scatter Podcast](https://soundcloud.com/scatterpodcast) to share car
 ## Programming & Analytics Skills
 
 * **R**: RStudio pro tools, R Markdown, Shiny, tidyverse, tidymodels, distill, plotly, leaflet, fable, feasts, Facebook's Prophet & NeuralProphet R implementations, and many more
-* **Other Analytics & Programming Tools**: SQL, JupyterHub, Jupyter Lab, NetBase, SAP Business Objects, Hugo, Netlify, Quest Analytics, Julia
-* **Microsoft Excel**: pivot tables, nested IF statements, INDEX / MATCH functions, VLOOKUP / HLOOKUP functions, Solver (for optimization and simulations... yes... in Excel!)
-* **Microsoft Access**: macros for data pipelines, data manipulation, ODBC integration, query design (joins, crosstab, make-table, etc.), reports, and forms
+* **Other Analytics & Programming Platforms**: JupyterHub, Jupyter Lab, GitLab, GitHub, RStudio Connect, Julia, NetBase, SQL, SAP Business Objects, Hugo, Netlify, Quest Analytics
+* **Microsoft**: Expert-level MS Access and Excel user with experience creating pivot tables, nested IF statements, INDEX / MATCH functions, VLOOKUP / HLOOKUP functions, Solver (for optimization and simulations... yes... in Excel!), macros for data manipulation pipelines, ODBC integration, query design (joins, crosstab, make-table, etc.), reports, and forms
 
 ## Media Appearances
 
