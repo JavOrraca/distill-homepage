@@ -1,5 +1,5 @@
 ---
-title: "rstudio::global(2021) tips, tricks, and more"
+title: "rstudio::global tips, tricks, and more"
 description: > 
   RStudio's annual conference saw roughly 15,000 attendees for 
   their first global, all-virtual, 24-hour event. I attended
@@ -9,7 +9,7 @@ description: >
 author:
   - name: Javier Orraca
     affiliation: Scatter Podcast
-date: 01-21-2021
+date: 01-23-2021
 categories:
   - RStudio
   - Conference
