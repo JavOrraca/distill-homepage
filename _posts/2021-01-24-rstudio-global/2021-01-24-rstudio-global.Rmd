@@ -46,9 +46,9 @@ Below are several reminders that Wickham discussed... If you're your harshest cr
 
 ### What is it?
 
-Coming from a converted `caret`-ista, it wasn't an easy transition to the full `tidymodels` framework. I liked the way `caret` _felt_, and I did almost everything with it from resampling, modeling, tuning, to model evaluation. Enter `tidymodels`. I've been using this framework for a year and the rate at which this ecosystem has evolved has been impressive.
+Coming from a converted `caret`-ista, it wasn't an easy transition to the full `tidymodels` framework. I liked the way `caret` _felt_, and I did almost everything with it from resampling, modeling, tuning, to model evaluation. Enter `tidymodels`, a framework that feels like a deconstructed `caret` - Each major `caret` feature has been enhanced and wrapped into its own package. I've been using this framework for roughly one year and the rate at which this ecosystem has evolved has been impressive. 
 
-So what is `tidymodels`? It's a collection of `tidyverse`-friendly packages written with a consistent vocabulary for machine learning, tuning, and developing reproducible modeling workflows. Its core packages include the following:
+`tidymodels` is a collection of tidy-friendly packages written with a consistent vocabulary for reproducible machine learning workflows. Its core packages include the following:
 
 * [rsample](https://rsample.tidymodels.org/): provides infrastructure for efficient data splitting and resampling
 
@@ -73,9 +73,9 @@ So what is `tidymodels`? It's a collection of `tidyverse`-friendly packages writ
 
 ## Irregular Grid Searches
 
-Irregular grid searches help you tune your models by cycling through randomized hyperparameter combinations in an effort to find the best-performing hyperparameters. I've been using the `dials::grid_latin_hypercube()` function to create Latin hypercubes which is explained below, highlighting the benefits of this space-filling design vs a purely randomized irregular grid search. Max Kuhn's _"New in tidymodels"_ rstudio::global event provided me with a fresh reminder about _why_ these methods are beneficial and _how_ they actually optimize performance.
+Irregular grid searches help you tune your models by cycling through randomized hyperparameters in an effort to yield the best (or at least better) performance. I've been using the `dials` package to create Latin hypercubes which is explained below, highlighting the benefits of this space-filling design vs a purely randomized irregular grid search. Max Kuhn's _"New in tidymodels"_ rstudio::global event provided me with a fresh reminder about _why_ these methods are beneficial and _how_ they actually optimize performance.
 
-The documentation below was copied almost entirely from Chapters 13 & 14 of Max Kuhn and Julia Silge's [_Tidy Modeling with R_](https://www.tmwr.org/) ("TMWR"). I've deleted certain bits and added minimal helper comments in brackets. If you find yourself statistically programming, bootstrapping / resampling, improving model performance through grid searches, maybe even ensemble stacking, I'd highly recommend that you bookmark the TMWR book.
+The documentation below was copied almost entirely from Chapter 13 of Max Kuhn and Julia Silge's [_Tidy Modeling with R_](https://www.tmwr.org/) ("TMWR"). I've deleted certain bits and added minimal helper comments in brackets. If you find yourself statistically programming, bootstrapping / resampling, improving model performance through grid searches, maybe even ensemble stacking, I'd highly recommend that you bookmark the TMWR book.
 
 ### Random Grid Search
 
@@ -141,7 +141,7 @@ To learn more about advanced _iterative search_ methods such as Bayesian optimiz
 
 ## usemodels
 
-This `tidymodels` package wasn't covered in detail in any of the rstudio::global(2021) events that I attended, but in the spirit of sharing useful tips, tricks, and packages, I'd like to introduce you to Max Kuhn's `usemodels` package (if you aren't already using it and/or familiar with it). This package is not yet on CRAN so you'll need to install it using the following:
+In the spirit of sharing useful tips, tricks, and packages, I'd like to introduce you to Max Kuhn's `usemodels` package. If you're on the fence about adopting the `tidymodels` framework, this package is definitely for you. Even for experienced users, `usemodels` is an excellent way to quickly general boilerplate code snippets that are algorithm-specific. This package is not yet on CRAN, so install it using the following:
 
 ```{r, eval=FALSE}
 # Installing usemodels from its GitHub repo
@@ -195,7 +195,7 @@ As of today's date, this package includes templates available with the following
 
 ### Ensemble Models 
 
-Similar to `usemodels`, this is a very early-stage package, but two packages that you should start following. There are several AI platforms for producing "model stacks" or "ensemble models" such as [H2O.ai](http://h2o-release.s3.amazonaws.com/h2o/master/1735/docs-website/Ruser/Rinstall.html) and several other open-source libraries. To my knowledge, `stacks` is the first one of these purpose-built for use with `tidymodels`. The following narrative is copied almost directly from the [stacks website](https://stacks.tidymodels.org/). 
+Similar to `usemodels`, this is a very early-stage package that you should start following. There are already several AI tools for producing "model stacks" or "ensemble models" such as [H2O.ai](http://h2o-release.s3.amazonaws.com/h2o/master/1735/docs-website/Ruser/Rinstall.html), [DataRobot](https://community.datarobot.com/t5/resources/welcome-to-using-r-with-datarobot/ta-p/1770), and a few others, however, `stacks` is the first purpose-built for use with `tidymodels`. The following narrative is copied almost directly from the [stacks website](https://stacks.tidymodels.org/). 
 
 `stacks` is an R package for model stacking that aligns with the `tidymodels`. Model stacking is an ensembling method that takes the outputs of many models and combines them to generate a new model - _referred to as an ensemble in this package_ - that generates predictions informed by each of its members.
 

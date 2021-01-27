@@ -33,7 +33,9 @@ I launched [Scatter Podcast](https://soundcloud.com/scatterpodcast) to share car
 
 ## Web Development
 
-I am not a web developer but I created this website using the [R](https://www.r-project.org/) programming language, [RStudio](https://www.rstudio.com/), and the [Distill](https://rstudio.github.io/distill/) package, an R web publishing framework that feels intuitive and easy to use if you're already familiar with R Markdown and blogdown. This site is being hosted for free on GitHub and it costs me $15/year for the domain name. Open-source tools are fast, flexible, fun, and the future of data science.
+I am not a web developer by trade, however, I utilize the R stack to develop and deploy websites, package documentation, and interactive web applications. For interactive enterprise web apps, [R Shiny](https://shiny.rstudio.com/) is my framework of choice. `shiny` allows me to build apps with clean UIs and advanced modules, and I can inject HTML, CSS, and JavaScript for front-end customization.
+
+This website was built with [Distill](https://rstudio.github.io/distill/), an R web publishing framework that feels intuitive and easy to use if you're already familiar with R Markdown and `blogdown`. I host this site for free on GitHub, deploy using Netlify, and I pay $15/year for the domain name. Open-source tools are fast, flexible, fun, and the future of data science.
 
 ## Contact Info and Social
 
