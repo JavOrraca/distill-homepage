@@ -11,6 +11,7 @@ date: 01-09-2020
 categories:
   - R
   - Packages
+  - Quick Tips
 output:
   distill::distill_article:
     self_contained: false

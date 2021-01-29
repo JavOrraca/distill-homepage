@@ -1,7 +1,7 @@
 ---
 title: "rstudio::global tips, tricks, and more"
 description: > 
-  RStudio's annual conference saw roughly 15,000 attendees for 
+  RStudio's annual conference saw roughly 17,000 attendees for 
   their first global, all-virtual, 24-hour event. I attended
   several sessions throughout the day and I'll highlight my
   favorite data bytes learned that day. I'll also share

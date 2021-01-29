@@ -12,7 +12,7 @@
       <title>rstudio::global tips, tricks, and more</title>
       <dc:creator>Javier Orraca</dc:creator>
       <link>https://www.javierorraca.com/posts/2021-01-24-rstudio-global</link>
-      <description>RStudio's annual conference saw roughly 15,000 attendees for  their first global, all-virtual, 24-hour event. I attended several sessions throughout the day and I'll highlight my favorite data bytes learned that day. I'll also share relatable content for better modeling with R.</description>
+      <description>RStudio's annual conference saw roughly 17,000 attendees for  their first global, all-virtual, 24-hour event. I attended several sessions throughout the day and I'll highlight my favorite data bytes learned that day. I'll also share relatable content for better modeling with R.</description>
       <category>RStudio</category>
       <category>Conference</category>
       <category>tidymodels</category>
@@ -29,6 +29,7 @@
       <category>RStudio</category>
       <category>Packages</category>
       <category>R</category>
+      <category>Quick Tips</category>
       <guid>https://www.javierorraca.com/posts/2021-01-19-rsthemes</guid>
       <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
       <media:content url="https://www.javierorraca.com/posts/2021-01-19-rsthemes/images/rsthemes.gif" medium="image" type="image/gif"/>
@@ -114,6 +115,7 @@
       <description>It's quite easy to manipulate raw data in a manner that "proves" your point. For the sake of exploring this topic further, I'll analyze police killing data and present it in three different ways.</description>
       <category>Statistics</category>
       <category>ggplot2</category>
+      <category>Visualizations</category>
       <category>R</category>
       <guid>https://www.javierorraca.com/posts/2020-04-19-Police-Killings</guid>
       <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
@@ -159,6 +161,8 @@
       <link>https://www.javierorraca.com/posts/2020-02-04-Hadley-Wickham-on-SDS-Podcast</link>
       <description>My eyes were opened to the world of analytics and data science in part through Kirill Eremenko and his amazing SuperDataScience podcast.</description>
       <category>RStudio</category>
+      <category>R</category>
+      <category>Python</category>
       <category>SuperDataScience</category>
       <guid>https://www.javierorraca.com/posts/2020-02-04-Hadley-Wickham-on-SDS-Podcast</guid>
       <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
@@ -218,6 +222,7 @@
       <description>Spending your days R but working closely with analysts  and leadership that live in Excel? Get familiar with openxlsx.</description>
       <category>R</category>
       <category>Packages</category>
+      <category>Quick Tips</category>
       <guid>https://www.javierorraca.com/posts/2020-01-09-Writing-to-Excel-from-R</guid>
       <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
       <media:content url="https://www.javierorraca.com/posts/2020-01-09-Writing-to-Excel-from-R/images/openxlsx.png" medium="image" type="image/png" width="3636" height="1248"/>
@@ -293,7 +298,7 @@
       <category>Development</category>
       <category>Packages</category>
       <category>R</category>
-      <category>Blogdown</category>
+      <category>blogdown</category>
       <guid>https://www.javierorraca.com/posts/2019-11-18-Blogdown</guid>
       <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
       <media:content url="https://www.javierorraca.com/posts/2019-11-18-Blogdown/images/blogdown.jpg" medium="image" type="image/jpeg"/>

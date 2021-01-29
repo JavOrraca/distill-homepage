@@ -31,9 +31,11 @@ I launched [Scatter Podcast](https://soundcloud.com/scatterpodcast) to share car
 * Orange County Predictive Modeling Hackathon Winner: [https://twitter.com/oc_rug/status/oc-r-users-group-hackathon-best-model](https://twitter.com/oc_rug/status/1130553620456300544?s=20)
 * UC Irvine Student Profile: [https://merage.uci.edu/programs/masters/master-science-business-analytics](https://merage.uci.edu/programs/masters/master-science-business-analytics/curriculum.html)
 
-## Web Development
+## Full Stack Web Development
 
-I am not a web developer by trade, however, I utilize the R stack to develop and deploy websites, package documentation, and interactive web applications. For interactive enterprise web apps, [R Shiny](https://shiny.rstudio.com/) is my framework of choice. `shiny` allows me to build apps with clean UIs and advanced modules, and I can inject HTML, CSS, and JavaScript for front-end customization.
+While not my primary professional focus, I am a proficient full stack web developer leveraging the R programming language and RStudio ecosystem. I develop and deploy client and server software including websites, APIs, and interactive web applications. For interactive, enterprise-grade web apps,
+
+[R Shiny](https://shiny.rstudio.com/) is my framework of choice. `shiny` allows me to build apps with clean UIs, advanced [modules](https://mastering-shiny.org/scaling-modules.html#scaling-modules), and I can easily inject [HTML](https://shiny.rstudio.com/articles/tag-glossary.html), [CSS](https://engineering-shiny.org/css.html), and [JavaScript](https://deanattali.com/shinyjs/) for front-end customization. Recently, I've been learning the [Julia](https://julialang.org/) programming language and [Genie](https://genieframework.com/) web framework to augment my data science and app development workflows.
 
 This website was built with [Distill](https://rstudio.github.io/distill/), an R web publishing framework that feels intuitive and easy to use if you're already familiar with R Markdown and `blogdown`. I host this site for free on GitHub, deploy using Netlify, and I pay $15/year for the domain name. Open-source tools are fast, flexible, fun, and the future of data science.
 

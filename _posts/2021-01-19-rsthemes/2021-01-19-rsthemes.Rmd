@@ -12,6 +12,7 @@ categories:
   - RStudio
   - Packages
   - R
+  - Quick Tips
 output:
   distill::distill_article:
     self_contained: false

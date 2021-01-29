@@ -10,6 +10,8 @@ author:
 date: 02-04-2020
 categories:
   - RStudio
+  - R
+  - Python
   - SuperDataScience
 output:
   distill::distill_article:
