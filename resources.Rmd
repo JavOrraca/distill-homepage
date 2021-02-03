@@ -12,7 +12,7 @@ R and Julia are open-source programming languages for statistical computing and 
 
 **R Classics**
 
-* [R for Data Science](https://r4ds.had.co.nz/): Phenomenal introduction to R, the RStudio IDE, and the {tidyverse} collection of packages
+* [R for Data Science](https://r4ds.had.co.nz/): Phenomenal introduction to R, the RStudio IDE, and the `tidyverse` collection of packages
 * [Advanced R](https://adv-r.hadley.nz/): Covers R concepts, methods, and structures in detail
 * [Mastering Shiny](https://mastering-shiny.org/): Designed to teach the foundations of Shiny for web development and more advanced concepts such as the introduction of modules to the Shiny framework
 * [R Packages](https://r-pkgs.org/): The definitive reference point for R package development "covering workflow and process, alongside the presentation of all the important moving parts that make up an R package"
