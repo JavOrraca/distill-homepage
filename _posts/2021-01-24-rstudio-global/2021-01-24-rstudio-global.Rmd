@@ -141,7 +141,7 @@ To learn more about advanced _iterative search_ methods such as Bayesian optimiz
 
 ## usemodels
 
-In the spirit of sharing useful tips, tricks, and packages, I'd like to introduce you to Max Kuhn's `usemodels` package. If you're on the fence about adopting the `tidymodels` framework, this package is definitely for you. Even for experienced users, `usemodels` is an excellent way to quickly general boilerplate code snippets that are algorithm-specific. This package is not yet on CRAN, so install it using the following:
+In the spirit of sharing useful tips, tricks, and packages, I'd like to introduce you to Max Kuhn's `usemodels` package. If you're on the fence about adopting the `tidymodels` framework, this package is definitely for you. Even for experienced users, `usemodels` is an excellent way to quickly generate boilerplate code snippets that are algorithm-specific. This package is not yet on CRAN, so install it using the following:
 
 ```{r, eval=FALSE}
 # Installing usemodels from its GitHub repo
