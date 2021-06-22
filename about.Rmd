@@ -26,6 +26,7 @@ I launched [Scatter Podcast](https://soundcloud.com/scatterpodcast) to share car
 
 ## Media Appearances
 
+* Data Points virtual conference hosted by Grid Dynamics: [https://datapoints.griddynamics.com/events/data-points-virtual-summit-healthcare-finance-06-09-2021/](https://datapoints.griddynamics.com/events/data-points-virtual-summit-healthcare-finance-06-09-2021/)
 * Scatter Podcast mention on Forbes: [https://forbes.com/how-to-get-your-data-scientist-career-started](https://forbes.com/sites/louiscolumbus/2019/04/14/how-to-get-your-data-scientist-career-started)
 * Scatter Podcast on UC Irvine News: [https://merage.uci.edu/news/2019/06/scatterpodcast](https://merage.uci.edu/news/2019/06/podcast-launched-by-merage-student-navigates-complex-field-of-data-analytics-and-science.html)
 * Orange County Predictive Modeling Hackathon Winner: [https://twitter.com/oc_rug/status/oc-r-users-group-hackathon-best-model](https://twitter.com/oc_rug/status/1130553620456300544?s=20)

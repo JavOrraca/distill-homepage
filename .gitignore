@@ -1,6 +1,6 @@
 .Rhistory
 .Rapp.history
 .Rprofile
-.Rproj
+*.Rproj
 .Rproj.user
 .RData
