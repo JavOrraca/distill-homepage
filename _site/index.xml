@@ -7,7 +7,21 @@
     <description>Data science and business analytics personal website.
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 24 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Beautiful Maps with Rayshader</title>
+      <dc:creator>Javier Orraca</dc:creator>
+      <link>https://www.javierorraca.com/posts/2021-03-11-rayshader</link>
+      <description>If you love beautiful 2D and 3D maps, now you can create your own with  elevation data, the rayshader package, OpenStreetMap, and ggplot2.</description>
+      <category>rayshader</category>
+      <category>raster</category>
+      <category>osmdata</category>
+      <category>sf</category>
+      <category>ggplot2</category>
+      <guid>https://www.javierorraca.com/posts/2021-03-11-rayshader</guid>
+      <pubDate>Thu, 11 Mar 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.javierorraca.com/posts/2021-03-11-rayshader/images/3D_render.png" medium="image" type="image/png" width="619" height="574"/>
+    </item>
     <item>
       <title>rstudio::global tips, tricks, and more</title>
       <dc:creator>Javier Orraca</dc:creator>
