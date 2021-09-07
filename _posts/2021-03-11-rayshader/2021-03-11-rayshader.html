@@ -1508,12 +1508,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="#features">Features</a></li>
 <li><a href="#next-steps">Next Steps</a></li>
 <li><a href="#session-info">Session Info</a></li>
+<li><a href="#resources">Resources</a></li>
 </ul></li>
 </ul>
 </nav>
 </div>
 <h1 id="overview">Overview</h1>
-<p>R, <code>rayshader</code>, OpenStreetMap… Lots of amazing learning to be had with these geomapping tools. I’m following Tyler Morgan-Wall’s <a href="https://www.tylermw.com/adding-open-street-map-data-to-rayshader-maps-in-r/">Adding Open Street Map Data to Rayshader Maps in R</a> tutorial and learning a lot about the development of beautiful maps with R. Laguna Beach is one of my favorite cities in the USA (<em>and the world!</em>) so I applied the concepts from this tutorial to building 2D and 3D maps of Laguna Beach. My work-in-progress and screen captures are below.</p>
+<p>R, <code>rayshader</code>, OpenStreetMap… Lots of amazing learning to be had with these geomapping tools. I’m following Tyler Morgan-Wall PhD’s <a href="https://www.tylermw.com/adding-open-street-map-data-to-rayshader-maps-in-r/">Adding Open Street Map Data to Rayshader Maps in R</a> tutorial and learning a lot about the development of beautiful maps with R. Laguna Beach is one of my favorite cities in the USA (<em>and the world!</em>) so I applied the concepts from this tutorial to building 2D and 3D maps of Laguna Beach. My work-in-progress and screen captures are below.</p>
 <p>Tyler Morgan-Wall’s introduction to the <code>rayshader</code> package and step-by-step tutorial make the process easy to follow and when you get stuck, you can almost always find an answer on his <code>rayshader</code> website or package GitHub (excellent technical documentation and code examples). One last caveat before I dive into my code workflow - Finding high-quality LIDAR or Digital Elevation Models (DEMs) for United States cities was <em>not easy</em>. To reproduce the steps below for your location of choice, you may have to get creative about cropping LIDAR/DEMs to zoom or subset the geography that you actually want to model (I also do this below).</p>
 <h1 id="setup">Setup</h1>
 <p>If you’re only wanting to learn, the team at <a href="https://shadedrelief.com/">Shaded Relief</a> has some high-resolution DEMs for public consumption: <a href="http://shadedrelief.com/SampleElevationModels/">http://shadedrelief.com/SampleElevationModels/</a></p>
@@ -1775,7 +1776,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <img src="images/3D_render.png" alt="3D render of Laguna Beach" /><figcaption aria-hidden="true">3D render of Laguna Beach</figcaption>
 </figure>
 <h2 id="next-steps">Next Steps</h2>
-<p>I haven’t revisited this project since Mar 2021 (finalizing this post now in Sep 2021), but I’ve seen some neat examples where developers added 3D polygons representing the businesses and residential housing, and additional styling for higher-resolution quality. Additionally, creating a 3D flyover video with the <code>rayshader</code> package looks phenomenal. For now, I hope this was helpful. Tyler Morgan-Wall knocked it out of the park with the package and his tutorials, so I hope you find his content as useful as I did.</p>
+<p>I’ve seen some neat examples where developers added 3D polygons to their maps to represent residential housing, commercial properties, and public facilities. I’ve also read about methods for rendering much higher-resolution maps (this would be great for printing). Creating 3D flyovers with <code>rayshader</code> also looks surprisingly enterprise-grade. These are all things I hope to revisit at some point in the near future. Tyler Morgan-Wall knocked it out of the park with the package and his tutorials, so I hope you find his content as useful as I did.</p>
 <h2 id="session-info">Session Info</h2>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>R version <span class="dv">4</span>.<span class="fl">1.1</span> (<span class="dv">2021-08-10</span>)</span>
@@ -1823,6 +1824,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>[<span class="dv">73</span>] classInt_0<span class="fl">.4</span><span class="dv">-3</span>     rvest_1.<span class="fl">0.1</span>        memoise_2.<span class="fl">0.0</span>      knitr_1<span class="fl">.33</span>        </span>
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>[<span class="dv">77</span>] usethis_2.<span class="fl">0.1</span>     </span></code></pre></div>
 </div>
+<h2 id="resources">Resources</h2>
+<ul>
+<li>rayshader: <a href="https://www.rayshader.com/">https://www.rayshader.com/</a></li>
+<li>rayrender: <a href="http://www.rayrender.net/">http://www.rayrender.net/</a></li>
+<li>Tyler Morgan-Wall, PhD: <a href="https://www.tylermw.com/">https://www.tylermw.com/</a></li>
+</ul>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

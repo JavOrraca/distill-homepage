@@ -26,7 +26,7 @@ knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 
 # Overview
 
-R, `rayshader`, OpenStreetMap... Lots of amazing learning to be had with these geomapping tools. I'm following Tyler Morgan-Wall's [Adding Open Street Map Data to Rayshader Maps in R](https://www.tylermw.com/adding-open-street-map-data-to-rayshader-maps-in-r/) tutorial and learning a lot about the development of beautiful maps with R. Laguna Beach is one of my favorite cities in the USA (_and the world!_) so I applied the concepts from this tutorial to building 2D and 3D maps of Laguna Beach. My work-in-progress and screen captures are below.
+R, `rayshader`, OpenStreetMap... Lots of amazing learning to be had with these geomapping tools. I'm following Tyler Morgan-Wall PhD's [Adding Open Street Map Data to Rayshader Maps in R](https://www.tylermw.com/adding-open-street-map-data-to-rayshader-maps-in-r/) tutorial and learning a lot about the development of beautiful maps with R. Laguna Beach is one of my favorite cities in the USA (_and the world!_) so I applied the concepts from this tutorial to building 2D and 3D maps of Laguna Beach. My work-in-progress and screen captures are below.
 
 Tyler Morgan-Wall's introduction to the `rayshader` package and step-by-step tutorial make the process easy to follow and when you get stuck, you can almost always find an answer on his `rayshader` website or package GitHub (excellent technical documentation and code examples). One last caveat before I dive into my code workflow - Finding high-quality LIDAR or Digital Elevation Models (DEMs) for United States cities was _not easy_. To reproduce the steps below for your location of choice, you may have to get creative about cropping LIDAR/DEMs to zoom or subset the geography that you actually want to model (I also do this below).
 
@@ -289,7 +289,7 @@ rayshader::render_snapshot()
 
 ## Next Steps
 
-I haven't revisited this project since Mar 2021 (finalizing this post now in Sep 2021), but I've seen some neat examples where developers added 3D polygons representing the businesses and residential housing, and additional styling for higher-resolution quality. Additionally, creating a 3D flyover video with the `rayshader` package looks phenomenal. For now, I hope this was helpful. Tyler Morgan-Wall knocked it out of the park with the package and his tutorials, so I hope you find his content as useful as I did.
+I've seen some neat examples where developers added 3D polygons to their maps to represent residential housing, commercial properties, and public facilities. I've also read about methods for rendering much higher-resolution maps (this would be great for printing). Creating 3D flyovers with `rayshader` also looks surprisingly enterprise-grade. These are all things I hope to revisit at some point in the near future. Tyler Morgan-Wall knocked it out of the park with the package and his tutorials, so I hope you find his content as useful as I did.
 
 ## Session Info
 
@@ -340,3 +340,8 @@ loaded via a namespace (and not attached):
 [77] usethis_2.0.1     
 ```
 
+## Resources
+
+- rayshader: [https://www.rayshader.com/](https://www.rayshader.com/)
+- rayrender: [http://www.rayrender.net/](http://www.rayrender.net/)
+- Tyler Morgan-Wall, PhD: [https://www.tylermw.com/](https://www.tylermw.com/)
