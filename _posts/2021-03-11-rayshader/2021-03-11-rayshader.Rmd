@@ -17,7 +17,7 @@ output:
   distill::distill_article:
     self_contained: false
     toc: true
-preview: images/3D_render.png
+preview: images/smallhobart.gif
 ---
 
 ```{r setup, include=FALSE}
@@ -26,15 +26,15 @@ knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 
 # Overview
 
-R, `rayshader`, open street maps... Lots of amazing learning to be had with these geomapping tools. I'm following Tyler Morgan-Wall's [_Adding Open Street Map Data to Rayshader Maps in R](https://www.tylermw.com/adding-open-street-map-data-to-rayshader-maps-in-r/) tutorial and learning a lot about the development of beautiful maps with R. Laguna Beach is one of my favorite cities in the USA - _and in the world_ - so I applied the concepts from this tutorial to Laguna Beach My work-in-progress code and screen captures are below.
+R, `rayshader`, OpenStreetMap... Lots of amazing learning to be had with these geomapping tools. I'm following Tyler Morgan-Wall's [Adding Open Street Map Data to Rayshader Maps in R](https://www.tylermw.com/adding-open-street-map-data-to-rayshader-maps-in-r/) tutorial and learning a lot about the development of beautiful maps with R. Laguna Beach is one of my favorite cities in the USA (_and the world!_) so I applied the concepts from this tutorial to building 2D and 3D maps of Laguna Beach. My work-in-progress and screen captures are below.
 
-Tyler Morgan-Wall's introduction to the `rayshader` package and step-by-step tutorial make the process easy to follow and when you get stuck, you can almost always find an answer on his `rayshader` website (excellent technical documentation and code examples). One last note before I dive into my code chunks below - Finding high-quality LIDAR or Digital Elevation Models (DEMs) for United States cities was _not_ easy. To reproduce the steps below for your location of choice, you may have to get creative with cropping LIDAR/DEMs to box the geography that you actually want to model, as I had to do with my example below.
+Tyler Morgan-Wall's introduction to the `rayshader` package and step-by-step tutorial make the process easy to follow and when you get stuck, you can almost always find an answer on his `rayshader` website or package GitHub (excellent technical documentation and code examples). One last caveat before I dive into my code workflow - Finding high-quality LIDAR or Digital Elevation Models (DEMs) for United States cities was _not easy_. To reproduce the steps below for your location of choice, you may have to get creative about cropping LIDAR/DEMs to zoom or subset the geography that you actually want to model (I also do this below).
 
 # Setup
 
-If you're only wanting to learn, the team at shadedrelief.com has several publicly available high-resolution DEMs for you to choose from: [http://shadedrelief.com/SampleElevationModels/](http://shadedrelief.com/SampleElevationModels/)
+If you're only wanting to learn, the team at [Shaded Relief](https://shadedrelief.com/) has some high-resolution DEMs for public consumption: [http://shadedrelief.com/SampleElevationModels/](http://shadedrelief.com/SampleElevationModels/)
 
-For the purposes of reproducibility, feel free to download the LIDAR (TIF format) of Laguna Canyon, California, that was my starting point. This data, made available by the United States Geological Survey's [National Geologic Map Database](https://ngmdb.usgs.gov/topoView/), was captured in 2018 as part of a study on Southern California wildfires. The geo-coordinate data points include latitude, longitude, and elevation, and are available roughly one meter apart (hence the 257 MB filesize). You can download this TIF from my Google Drive here: [https://drive.google.com/Javier/USGS_TIF](https://drive.google.com/file/d/1IfdYa0nYYk7_n1McV5IRhgk-rXJtLA9P/view?usp=sharing) 
+For the purposes of reproducibility, my starting point was a LIDAR capture (TIF format) of Laguna Canyon in California. This data, made available by the United States Geological Survey's [National Geologic Map Database](https://ngmdb.usgs.gov/topoView/), was captured in 2018 as part of a study on Southern California wildfires. The geo-coordinate data points include latitude, longitude, and elevation, and are available roughly one meter apart (hence the 257 MB filesize). You can download this TIF from my Google Drive here: [https://drive.google.com/Javier/USGS_TIF](https://drive.google.com/file/d/1IfdYa0nYYk7_n1McV5IRhgk-rXJtLA9P/view?usp=sharing) 
 
 Start by installing the development versions of the `rayshader` and `rayimage` packages, and loading several others packages used in this project. If you're using a Linux machine, you may need to install additional system libraries to properly render these visuals.
 
@@ -59,7 +59,7 @@ laguna <- raster::raster("./USGS_one_meter_x42y372_CA_SoCal_Wildfires_B1_2018.ti
 
 ## EDA
 
-Next, we can visualize the elevation data with `rayshader` defaults to understand general elevation differences in the data set. Before we can render this visual, we need to transform the **laguna** data structure to a matrix. For faster rendering, we can also resize the matrix using `rayshader::resize_matrix()` that can downscale using bilinear interpolation.
+To better explore the data, lets begin by visualizing the elevation data with `rayshader` defaults to understand the geography that we are going to work with. Before we can render this visual, we need to transform the `laguna` data object (assigned above) to a matrix. For faster rendering and prototyping, you can also resize the matrix using `rayshader::resize_matrix()`. This resizing will downscale your full dataset using bilinear interpolation.
 
 ```{r, echo=TRUE, eval=FALSE}
 # Transform the spatial data structure into a regular R matrix
@@ -78,7 +78,7 @@ laguna_small %>%
 
 ## Cropping
 
-I wanted to focus only on downtown Laguna Beach. This only represents a fraction of the raw LIDAR. To get the lat-long range of my desired geography, I used Google Maps to obtain the endpoints of my desired box. Below, we use a crazy-looking function (thank you Tyler Morgan-Wall) to accomplish this geospatial cropping: 
+I wanted to focus only on downtown Laguna Beach. This only represents a fraction of the raw LIDAR. To get the lat-long range of my desired geography, I used Google Maps to obtain the endpoints of my desired box. Below, we use a custom cropping function (_thank you, Tyler Morgan-Wall_) to accomplish this transformation. 
 
 ```{r, echo=TRUE, eval=FALSE}
 # Crop to fit desired box around downtown Laguna Beach
@@ -109,8 +109,6 @@ laguna_zoom <- raster::crop(laguna, extent_zoomed)
 laguna_zoom_mat <- rayshader::raster_to_matrix(laguna_zoom)
 ```
 
-![Base Map](./images/base_map.png)
-
 # 2D Map
 
 ## Base Map
@@ -138,9 +136,11 @@ base_map <- laguna_zoom_mat %>%
 rayshader::plot_map(base_map)
 ```
 
+![Base Map](./images/base_map.png)
+
 ## OpenStreetMap
 
-OpenStreetMap (OSM) is a collaborative project to create a free editable geographic database of the world and the underlying geodata includes details for roads, buildings, hiking paths, rivers, etc. We'll leverage the `osmdata` package to import OSM data into R from the `overpass` API. The `osmdata` processes routines in C++ for fast construction and loading into R. We'll load several layers of OSM details, followed by converting those sf objects to the coordinate system we're working with for this `rayshader` project.
+OpenStreetMap (OSM) is a collaborative project to create a free editable geographic database of the world and the underlying geodata includes details for roads, buildings, hiking paths, rivers, etc. We'll leverage the `osmdata` package to import OSM data into R from the `overpass` API. The `osmdata` processes routines in C++ for fast construction and loading into R. We'll load several layers of OSM details, followed by converting those `sf` objects to the coordinate system we're working with for this `rayshader` project.
 
 ```{r, echo=TRUE, eval=FALSE}
 osm_bbox = c(long_range[1],lat_range[1], long_range[2],lat_range[2])
@@ -179,7 +179,7 @@ base_map %>%
 
 ![Base Map Layer 1](./images/base_map_layer1.png)
 
-I want different styles for different OSM lines. To accomplish this, we'll create several groups of OSM lines and begin prototyping with styles.
+I want different styles for different OSM lines so let's continue by creating several groups of OSM lines.
 
 ```{r, echo=TRUE, eval=FALSE}
 # Subset layers of laguna_lines
