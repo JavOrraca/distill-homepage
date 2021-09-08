@@ -6,7 +6,7 @@ description: >
 author:
   - name: Javier Orraca
     affiliation: Scatter Podcast
-date: 03-11-2021
+date: 09-07-2021
 categories:
   - rayshader
   - raster
@@ -26,17 +26,19 @@ knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 
 # Overview
 
-R, `rayshader`, OpenStreetMap... Lots of amazing learning to be had with these geomapping tools. I'm following Tyler Morgan-Wall PhD's [Adding Open Street Map Data to Rayshader Maps in R](https://www.tylermw.com/adding-open-street-map-data-to-rayshader-maps-in-r/) tutorial and learning a lot about the development of beautiful maps with R. Laguna Beach is one of my favorite cities in the USA (_and the world!_) so I applied the concepts from this tutorial to building 2D and 3D maps of Laguna Beach. My work-in-progress and screen captures are below.
+R, `rayshader`, OpenStreetMap... Lots of amazing learning to be had with these mapping tools. I'm following Tyler Morgan-Wall PhD's [Adding Open Street Map Data to Rayshader Maps in R](https://www.tylermw.com/adding-open-street-map-data-to-rayshader-maps-in-r/) tutorial and learning a lot about the development of beautiful maps with R. Laguna Beach is one of my favorite cities in the USA (_and the world!_) so I applied the concepts from this tutorial to building 2D and 3D maps of Laguna Beach. My work-in-progress and screen captures are below.
 
-Tyler Morgan-Wall's introduction to the `rayshader` package and step-by-step tutorial make the process easy to follow and when you get stuck, you can almost always find an answer on his `rayshader` website or package GitHub (excellent technical documentation and code examples). One last caveat before I dive into my code workflow - Finding high-quality LIDAR or Digital Elevation Models (DEMs) for United States cities was _not easy_. To reproduce the steps below for your location of choice, you may have to get creative about cropping LIDAR/DEMs to zoom or subset the geography that you actually want to model (I also do this below).
+Tyler Morgan-Wall PhD (TMW) authored the `rayshader` package and his step-by-step tutorial is both easy to follow and incredibly informative. If you get stuck (_more like, "when you get stuck"_), you can almost always find an answer on the `rayshader` website or GitHub repo (excellent technical documentation and code examples).
+
+One last caveat before I dive into my code - Finding high-quality LIDAR or Digital Elevation Models (DEMs) for United States cities is _not easy_. To apply the steps below to your location of choice, you'll have to get creative about cropping LIDAR/DEMs to zoom into the geography that you want to model (more info on cropping in the sections below).
 
 # Setup
 
-If you're only wanting to learn, the team at [Shaded Relief](https://shadedrelief.com/) has some high-resolution DEMs for public consumption: [http://shadedrelief.com/SampleElevationModels/](http://shadedrelief.com/SampleElevationModels/)
+Where do you start? Find yourself a high-resolution DEM or LIDAR capture of a location that you love. The team at [Shaded Relief](https://shadedrelief.com/) has some high-res DEMs for public consumption: [http://shadedrelief.com/SampleElevationModels/](http://shadedrelief.com/SampleElevationModels/)
 
-For the purposes of reproducibility, my starting point was a LIDAR capture (TIF format) of Laguna Canyon in California. This data, made available by the United States Geological Survey's [National Geologic Map Database](https://ngmdb.usgs.gov/topoView/), was captured in 2018 as part of a study on Southern California wildfires. The geo-coordinate data points include latitude, longitude, and elevation, and are available roughly one meter apart (hence the 257 MB filesize). You can download this TIF from my Google Drive here: [https://drive.google.com/Javier/USGS_TIF](https://drive.google.com/file/d/1IfdYa0nYYk7_n1McV5IRhgk-rXJtLA9P/view?usp=sharing) 
+My starting point was a LIDAR capture of Laguna Canyon in California. This geo-data, made available by the United States Geological Survey's [National Geologic Map Database](https://ngmdb.usgs.gov/topoView/), was captured in 2018 as part of a study on Southern California wildfires. The LIDAR image (captured as a TIF file) includes three variables per observation: latitude, longitude, and elevation. This Laguna Canyon LIDAR image captures these data points in one meter increments (hence the 257 MB file size). You can download this TIF from my Google Drive here: [https://drive.google.com/Javier/USGS_TIF](https://drive.google.com/file/d/1IfdYa0nYYk7_n1McV5IRhgk-rXJtLA9P/view?usp=sharing) 
 
-Start by installing the development versions of the `rayshader` and `rayimage` packages, and loading several others packages used in this project. If you're using a Linux machine, you may need to install additional system libraries to properly render these visuals.
+Start by installing the development versions of the `rayshader` and `rayimage` packages, and loading several others packages used in this project. I run Ubuntu and experienced some dependency issues, at least initially. If you can Google Search, you can figure out the additional Linux libraries that you might need (my apologies for not documenting this better! - I worked on this code in March but just now getting around to documenting my workflow... _in September!_).
 
 ## Libraries
 
@@ -59,7 +61,7 @@ laguna <- raster::raster("./USGS_one_meter_x42y372_CA_SoCal_Wildfires_B1_2018.ti
 
 ## EDA
 
-To better explore the data, lets begin by visualizing the elevation data with `rayshader` defaults to understand the geography that we are going to work with. Before we can render this visual, we need to transform the `laguna` data object (assigned above) to a matrix. For faster rendering and prototyping, you can also resize the matrix using `rayshader::resize_matrix()`. This resizing will downscale your full dataset using bilinear interpolation.
+To better explore the data, lets begin by visualizing the elevation data with `rayshader` defaults to understand the topography that we are working with. Before we can render this visual, we need to transform the **laguna** data object (assigned above) to a matrix. For faster rendering and prototyping, you can also resize the matrix using `rayshader::resize_matrix()`. This resizing will downscale your full dataset using bilinear interpolation.
 
 ```{r, echo=TRUE, eval=FALSE}
 # Transform the spatial data structure into a regular R matrix
@@ -68,7 +70,7 @@ laguna_mat <- rayshader::raster_to_matrix(laguna)
 # Create small version of matrix for quick visual prototyping
 laguna_small <- rayshader::resize_matrix(laguna_mat, 0.1)
 
-# Plot base map with using basic color defaults
+# Plot base map using basic color defaults
 laguna_small %>% 
   rayshader::height_shade() %>% 
   rayshader::plot_map()
@@ -78,7 +80,7 @@ laguna_small %>%
 
 ## Cropping
 
-I wanted to focus only on downtown Laguna Beach. This only represents a fraction of the raw LIDAR. To get the lat-long range of my desired geography, I used Google Maps to obtain the endpoints of my desired box. Below, we use a custom cropping function (_thank you, Tyler Morgan-Wall_) to accomplish this transformation. 
+I wanted to focus on downtown Laguna Beach but this only represents a small fraction of the raw LIDAR. To get the desired lat-long range of downtown Laguna Beach, I used Google Maps to get the endpoints of my desired box. To accomplish this cropping, below, we relied on a custom cropping function that TMW shared on the `rayshader` site. 
 
 ```{r, echo=TRUE, eval=FALSE}
 # Crop to fit desired box around downtown Laguna Beach
@@ -104,8 +106,10 @@ utm_bbox <- convert_coords(lat = lat_range,
 raster::extent(laguna)
 
 extent_zoomed <- raster::extent(utm_bbox[1], utm_bbox[2], 
-                                utm_bbox[3], utm_bbox[4])
+                                utm_bbox[3], utm_bbox[4])h
+
 laguna_zoom <- raster::crop(laguna, extent_zoomed)
+
 laguna_zoom_mat <- rayshader::raster_to_matrix(laguna_zoom)
 ```
 
@@ -113,7 +117,7 @@ laguna_zoom_mat <- rayshader::raster_to_matrix(laguna_zoom)
 
 ## Base Map
 
-I was inspired by the color schemes that Tyler Morgan-Wall shared, specifically the blueish-pinkish palette made popular by Swiss cartographer's Eduard Imhof with his relief shading work. Try adjusting the options below before moving forward as we will continue to build off of this initial base map layer.
+I was inspired by the relief shading work of Eduard Imhof, Swiss cartographer and mapping visionary. In particular, I loved the blueish-pink palette that Imhof popularized. When you get to this step, try adjusting the settings below to your liking. We will continue to build on top of this initial base map layer.
 
 ```{r, echo=TRUE, eval=FALSE}
 base_map <- laguna_zoom_mat %>% 
@@ -136,11 +140,11 @@ base_map <- laguna_zoom_mat %>%
 rayshader::plot_map(base_map)
 ```
 
-![Base Map](./images/base_map.png)
+![Laguna Beach base map a la Eduard Imhof](./images/base_map.png)
 
 ## OpenStreetMap
 
-OpenStreetMap (OSM) is a collaborative project to create a free editable geographic database of the world and the underlying geodata includes details for roads, buildings, hiking paths, rivers, etc. We'll leverage the `osmdata` package to import OSM data into R from the `overpass` API. The `osmdata` processes routines in C++ for fast construction and loading into R. We'll load several layers of OSM details, followed by converting those `sf` objects to the coordinate system we're working with for this `rayshader` project.
+OpenStreetMap (OSM) offers an open-source, editable geographic database of the world and the underlying data includes details for roads, buildings, hiking paths, rivers, etc. We'll leverage the `osmdata` package for R to import OSM data (and utilizing the `overpass` API). The `osmdata` package processes routines in C++ for fast construction and loading into R. We'll first load several layers of OSM details. Subsequently, we'll convert those `sf` objects to the coordinate system we're working with for this `rayshader` project.
 
 ```{r, echo=TRUE, eval=FALSE}
 osm_bbox = c(long_range[1],lat_range[1], long_range[2],lat_range[2])
@@ -160,7 +164,7 @@ ggplot(laguna_lines, aes(color = osm_id)) +
   labs(title = "Open Street Map `highway` attribute in Laguna Beach")
 ```
 
-![OSM render using ggplot2](./images/OSM_ggplot2_render.png)
+![OSM render of Laguna Beach roads and highways using ggplot2](./images/OSM_ggplot2_render.png)
 
 ## Layering
 
@@ -204,8 +208,8 @@ trails_layer <-
     heightmap = laguna_zoom_mat) %>%
   
   # Note: While barely visible in the final outputs, the following
-  # adds what looks like a black shadow to the white dashed lines
-  # representing the hiking trails around Laguna Beach 
+  # code adds an offset black shadow to the white dashed lines to
+  # represent the hiking trails around Laguna Beach 
   rayshader::add_overlay(
     rayshader::generate_line_overlay(
       laguna_trails, extent = extent_zoomed,
@@ -225,7 +229,7 @@ trails_layer <-
       heightmap = laguna_zoom_mat))
 ```
 
-We'll create some additional projections of OSM layers (initially done to pull in building data, but this is a WIP).
+We'll create some additional projections of OSM layers.
 
 ```{r, echo=TRUE, eval=FALSE}
 laguna_parking <- osmdata::opq(osm_bbox) %>% 
@@ -242,7 +246,7 @@ laguna_building_poly <- st_transform(laguna_building$osm_polygons, crs = crs(lag
 
 ## Final Touches
 
-Now we're ready to build upon our base map and see the 2D visual in action. We'll begin by creating a polygon layer of the parking and building features, and adding the styled **trails_layer** OSM lines on top of that.
+Now we're ready to build upon our base map and see the 2D visual in action. Let's create a polygon layer of the parking and building features, and adding the styled **trails_layer** on top of that.
 
 ```{r, echo=TRUE, eval=FALSE}
 polygon_layer <- 
@@ -262,22 +266,25 @@ base_map %>%
   rayshader::plot_map()
 ```
 
-![2D render of Laguna Beach](./images/2D_render.png)
+![2D render of Laguna Beach... Success!](./images/2D_render.png)
 
 # 3D Map
 
 ## Features
 
-To render a 3D map, we follow a very similar pipeline to the 2D map but utilizing `rayshader::plot_3d()`. This function introduces new arguments and I spent more time than I anticipated adjusting the zscale, zoom, rotation, pitch, and water specifications.
+To render a 3D map, we follow a very similar pipeline to the 2D map but utilizing `rayshader::plot_3d()`. This function introduces new arguments and I spent much more time than I had anticipated in adjusting the zscale, zoom, rotation, pitch, and water specifications.
 
-To exaggerate the elevation details in this area, I decided on a `zscale` < 1 that would still resemble the reality and beauty of the Laguna Beach hills - Something too low, e.g., `zscale = 0.25`, was too exaggerated for my liking. Once the 3D viewer renders your visual, enter `rayshader::render_snapshot()` into your console to take a flat snapshot of your 3D rendering, saving your snapshot if desired.
+To exaggerate the elevation details in this area, I decided on a `zscale` < 1 that would still resemble the reality and beauty of the Laguna Beach hills. Too low of a `zscale`, e.g., `zscale = 0.25`, was too exaggerated for my liking. Once the 3D viewer renders your visual, enter `rayshader::render_snapshot()` into your console to take a flat snapshot of your 3D rendering, saving your snapshot if desired.
 
 ```{r, echo=TRUE, eval=FALSE}
 base_map %>% 
   rayshader::add_overlay(polygon_layer) %>%
   rayshader::add_overlay(trails_layer) %>%
-  rayshader::plot_3d(heightmap = laguna_zoom_mat, zscale = 0.75, fov = 0, theta = -45, zoom = 0.75, phi = 45,
-                     water = TRUE, waterdepth = 4, wateralpha = 0.4, watercolor = "lightblue",
+  rayshader::plot_3d(heightmap = laguna_zoom_mat, 
+                     zscale = 0.75, fov = 0, 
+                     theta = -45, zoom = 0.75, phi = 45,
+                     water = TRUE, waterdepth = 4, 
+                     wateralpha = 0.4, watercolor = "lightblue",
                      waterlinecolor = "white", waterlinealpha = 0.5,
                      background = "white")
 
@@ -289,7 +296,7 @@ rayshader::render_snapshot()
 
 ## Next Steps
 
-I've seen some neat examples where developers added 3D polygons to their maps to represent residential housing, commercial properties, and public facilities. I've also read about methods for rendering much higher-resolution maps (this would be great for printing). Creating 3D flyovers with `rayshader` also looks surprisingly enterprise-grade. These are all things I hope to revisit at some point in the near future. Tyler Morgan-Wall knocked it out of the park with the package and his tutorials, so I hope you find his content as useful as I did.
+I've seen some neat examples where developers add 3D polygons to their maps to represent residential housing, commercial properties, and public facilities. I recently read about methods for rendering much higher-resolution maps (this would be great for printing). Creating 3D flyovers with `rayshader` also looks surprisingly high-end for open-source software. These are all things I hope to revisit at some point in the near future. TMW knocked it out of the park with his package and tutorials, so I hope you find his content as useful as I did.
 
 ## Session Info
 
