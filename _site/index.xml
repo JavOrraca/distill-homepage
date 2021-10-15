@@ -23,6 +23,30 @@
       <media:content url="https://www.javierorraca.com/posts/2021-09-07-rayshader/images/smallhobart.gif" medium="image" type="image/gif"/>
     </item>
     <item>
+      <title>DT: An R Interface to the JavaScript library DataTables</title>
+      <dc:creator>Javier Orraca</dc:creator>
+      <link>https://www.javierorraca.com/posts/2021-05-03-DT</link>
+      <description>The R package DT provides an R interface to the JavaScript library DataTables. R data objects (matrices or data frames) can be displayed as tables on HTML pages, and DataTables provides filtering, pagination, sorting, interactivity with Shiny, and many other features.</description>
+      <category>RStudio</category>
+      <category>Packages</category>
+      <category>R</category>
+      <category>DT</category>
+      <guid>https://www.javierorraca.com/posts/2021-05-03-DT</guid>
+      <pubDate>Thu, 27 May 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.javierorraca.com/posts/2021-05-03-DT/images/DT_Shiny.png" medium="image" type="image/png" width="887" height="520"/>
+    </item>
+    <item>
+      <title>A Brief History of the Dataframe</title>
+      <dc:creator>Javier Orraca</dc:creator>
+      <link>https://www.javierorraca.com/posts/2021-05-24-dataframe</link>
+      <description>Insightful read sourced from Towards Data Science on the history of the dataframe - From its origins in the S programming language, to R, to pandas for Python (to the tibble for R!).</description>
+      <category>R</category>
+      <category>tibble</category>
+      <guid>https://www.javierorraca.com/posts/2021-05-24-dataframe</guid>
+      <pubDate>Mon, 24 May 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.javierorraca.com/posts/2021-05-24-dataframe/images/dataframe.jpeg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
       <title>rstudio::global tips, tricks, and more</title>
       <dc:creator>Javier Orraca</dc:creator>
       <link>https://www.javierorraca.com/posts/2021-01-24-rstudio-global</link>
