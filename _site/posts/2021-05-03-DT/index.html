@@ -56,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -77,13 +77,14 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
 <title>Javier Orraca: DT: An R Interface to the JavaScript library DataTables</title>
@@ -94,8 +95,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2021-05-27"/>
-<meta property="article:created" itemprop="dateCreated" content="2021-05-27"/>
+<meta property="article:published" itemprop="datePublished" content="2021-05-03"/>
+<meta property="article:created" itemprop="dateCreated" content="2021-05-03"/>
 <meta name="article:author" content="Javier Orraca"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -122,15 +123,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta name="citation_title" content="Javier Orraca: DT: An R Interface to the JavaScript library DataTables"/>
 <meta name="citation_fulltext_html_url" content="https://www.javierorraca.com/posts/2021-05-03-DT/"/>
 <meta name="citation_fulltext_world_readable" content=""/>
-<meta name="citation_online_date" content="2021/05/27"/>
-<meta name="citation_publication_date" content="2021/05/27"/>
+<meta name="citation_online_date" content="2021/05/03"/>
+<meta name="citation_publication_date" content="2021/05/03"/>
 <meta name="citation_author" content="Javier Orraca"/>
 <meta name="citation_author_institution" content="Scatter Podcast"/>
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","categories","output","preview","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["DT: An R Interface to the JavaScript library DataTables"]},{"type":"character","attributes":{},"value":["The R package DT provides an R interface to the JavaScript library DataTables. R data objects (matrices or data frames) can be displayed as tables on HTML pages, and DataTables provides filtering, pagination, sorting, interactivity with Shiny, and many other features."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Javier Orraca"]},{"type":"character","attributes":{},"value":["Scatter Podcast"]}]}]},{"type":"character","attributes":{},"value":["05-27-2021"]},{"type":"character","attributes":{},"value":["RStudio","Packages","R","DT"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]}]}]},{"type":"character","attributes":{},"value":["images/DT_Shiny.png"]},{"type":"character","attributes":{},"value":["https://www.javierorraca.com/posts/2021-05-03-DT/"]},{"type":"character","attributes":{},"value":["https://www.javierorraca.com/posts/2021-05-03-DT/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","categories","output","preview","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["DT: An R Interface to the JavaScript library DataTables"]},{"type":"character","attributes":{},"value":["The R package DT provides an R interface to the JavaScript library DataTables. R data objects (matrices or data frames) can be displayed as tables on HTML pages, and DataTables provides filtering, pagination, sorting, interactivity with Shiny, and many other features."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Javier Orraca"]},{"type":"character","attributes":{},"value":["Scatter Podcast"]}]}]},{"type":"character","attributes":{},"value":["05-03-2021"]},{"type":"character","attributes":{},"value":["RStudio","Packages","R","DT"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]}]}]},{"type":"character","attributes":{},"value":["images/DT_Shiny.png"]},{"type":"character","attributes":{},"value":["https://www.javierorraca.com/posts/2021-05-03-DT/"]},{"type":"character","attributes":{},"value":["https://www.javierorraca.com/posts/2021-05-03-DT/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1888,7 +1889,10 @@ function init_distill() {
 
     // hoverable references
     $('span.citation[data-cites]').each(function() {
-      var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+      var refs = $(this).attr('data-cites').split(" ");
+      var refHtml = refs.map(function(ref) {
+        return "<p>" + $('#ref-' + ref).html() + "</p>";
+      }).join("\n");
       window.tippy(this, {
         allowHTML: true,
         content: refHtml,
@@ -2424,7 +2428,7 @@ gtag('config', 'UA-127790709-3');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"DT: An R Interface to the JavaScript library DataTables","description":"The R package DT provides an R interface to the JavaScript library DataTables. R data objects (matrices or data frames) can be displayed as tables on HTML pages, and DataTables provides filtering, pagination, sorting, interactivity with Shiny, and many other features.","authors":[{"author":"Javier Orraca","authorURL":"#","affiliation":"Scatter Podcast","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-05-27T00:00:00.000-07:00","citationText":"Orraca, 2021"}
+{"title":"DT: An R Interface to the JavaScript library DataTables","description":"The R package DT provides an R interface to the JavaScript library DataTables. R data objects (matrices or data frames) can be displayed as tables on HTML pages, and DataTables provides filtering, pagination, sorting, interactivity with Shiny, and many other features.","authors":[{"author":"Javier Orraca","authorURL":"#","affiliation":"Scatter Podcast","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-05-03T00:00:00.000-07:00","citationText":"Orraca, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2487,7 +2491,7 @@ Scatter Podcast
 <div class="d-byline">
   Javier Orraca  (Scatter Podcast)
   
-<br/>05-27-2021
+<br/>05-03-2021
 </div>
 
 <div class="d-article">
@@ -2518,7 +2522,7 @@ Scatter Podcast
   <p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
   <h3 id="citation">Citation</h3>
   <p>For attribution, please cite this work as</p>
-  <pre class="citation-appendix short">Orraca (2021, May 27). Javier Orraca: DT: An R Interface to the JavaScript library DataTables. Retrieved from https://www.javierorraca.com/posts/2021-05-03-DT/</pre>
+  <pre class="citation-appendix short">Orraca (2021, May 3). Javier Orraca: DT: An R Interface to the JavaScript library DataTables. Retrieved from https://www.javierorraca.com/posts/2021-05-03-DT/</pre>
   <p>BibTeX citation</p>
   <pre class="citation-appendix long">@misc{orraca2021dt:,
   author = {Orraca, Javier},
