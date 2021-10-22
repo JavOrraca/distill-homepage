@@ -7,7 +7,18 @@
     <description>Data science and business analytics personal website.
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 07 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Torch for R + luz</title>
+      <dc:creator>Javier Orraca</dc:creator>
+      <link>https://www.javierorraca.com/posts/2021-10-21-torch-for-r</link>
+      <description>The ‘torch for R’ ecosystem is a collection of extensions for torch, an R framework for machine learning and artificial intelligence based on PyTorch.</description>
+      <category>torch</category>
+      <category>luz</category>
+      <guid>https://www.javierorraca.com/posts/2021-10-21-torch-for-r</guid>
+      <pubDate>Fri, 22 Oct 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.javierorraca.com/posts/2021-10-21-torch-for-r/images/torch_and_luz.png" medium="image" type="image/png" width="616" height="391"/>
+    </item>
     <item>
       <title>Beautiful Maps with Rayshader</title>
       <dc:creator>Javier Orraca</dc:creator>

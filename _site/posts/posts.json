@@ -1,5 +1,27 @@
 [
   {
+    "path": "posts/2021-10-21-torch-for-r/",
+    "title": "Torch for R + luz",
+    "description": "The ‘torch for R’ ecosystem is a collection of extensions for torch, an R framework for machine learning and artificial intelligence based on PyTorch.",
+    "author": [
+      {
+        "name": "Javier Orraca",
+        "url": {}
+      }
+    ],
+    "date": "2021-10-22",
+    "categories": [
+      "torch",
+      "luz"
+    ],
+    "contents": "\nTorch for R… wow! 🔥🔥🔥 I was recently having a discussion with a coworker about the benefits of Torch, especially the power of training one global model capable of hierarchical projections (awesome for time series) and predicting multiple group-specific regressions. I went down a Googling rabbit hole last weekend and came across some amazing articles by Sigrid Keydana (see links below) introducing torch to the R community and also recently releasing luz, a high-level R interface to Torch (“luz is to torch what Keras is to TensorFlow”).\nThis is super exciting that I no longer need to launch a conda environment for complex NNs (although having Python on your system is always handy 😅). And even better, “torch for R is built directly on top of libtorch, a C++ library that provides the tensor-computation and automatic-differentiation capabilities essential to building neural networks.” If you’re looking for fast NNs and deep learning solutions within the #rstats framework, give these packages a try. Happy Friday and happy learning! 🤓📚\nSources\nIntro to Torch: Torch for R\nIntro to Luz: Que Haja luz: More light for torch!\nIntro to TabNet: TabNet for Tabular Data with Torch\nIntro to Time Series with Torch: Introductory Time-Series Forecasting with Torch\nSigrid Keydana: Sigrid on LinkedIn\n\n\n\n",
+    "preview": "posts/2021-10-21-torch-for-r/images/torch_and_luz.png",
+    "last_modified": "2021-10-21T21:08:33-07:00",
+    "input_file": {},
+    "preview_width": 616,
+    "preview_height": 391
+  },
+  {
     "path": "posts/2021-09-07-rayshader/",
     "title": "Beautiful Maps with Rayshader",
     "description": "If you love beautiful 2D and 3D maps, now you can create your own with  elevation data, the rayshader package, OpenStreetMap, and ggplot2.",
