@@ -12,7 +12,7 @@ My name is Javier Orraca and I'm a data scientist. I enjoy building predictive m
 
 ## Professional
 
-My career includes over 15 years of data science, financial strategy, and business analytics for EY, PG&E, KPMG, Health Net, and [Bloomreach](https://bloomreach.com/). At Bloomreach, my team applies data science techniques to weaponize data and empower decision makers with descriptive and prescriptive analytics. I help our business develop and deploy automation solutions, predictive algorithms, and interactive web apps for our internal leaders, Operations, Product, Marketing, and Sales teams. 
+My career includes over 15 years of data science, financial strategy, and business analytics for EY, PG&E, KPMG, Health Net, and [Bloomreach](https://bloomreach.com/). At Bloomreach, my team applies data science techniques to empower decision makers with descriptive and prescriptive analytics. I help our business develop and deploy automation solutions, predictive algorithms, and interactive web apps for our internal leaders, Operations, Product, Marketing, and Sales teams. 
 
 ## Scatter Podcast
 

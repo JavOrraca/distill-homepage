@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -1027,10 +1028,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     margin-top: 1.5em;
   }
 
-  .figure img {
-    width: 100%;
-  }
-
   .figure .caption {
     color: rgba(0, 0, 0, 0.6);
     font-size: 12px;
@@ -1860,6 +1857,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
+        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+          var fn = $(this).children()[0]
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
           return "<p>" + $('#ref-' + ref).html() + "</p>";
@@ -1874,6 +1877,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1973,6 +2001,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1995,7 +2025,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -2371,7 +2401,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2455,39 +2485,100 @@ Scatter Podcast
 
 <div class="d-article">
 <figure>
-<img src="images/Javier.jpg" alt="Tulum, Quintana Roo, Mexico - The second happiest place on Earth, after Disneyland" /><figcaption aria-hidden="true">Tulum, Quintana Roo, Mexico - The second happiest place on Earth, after Disneyland</figcaption>
+<img src="images/Javier.jpg"
+alt="Tulum, Quintana Roo, Mexico - The second happiest place on Earth, after Disneyland" />
+<figcaption aria-hidden="true">Tulum, Quintana Roo, Mexico - The second
+happiest place on Earth, after Disneyland</figcaption>
 </figure>
-<p>My name is Javier Orraca and I’m a data scientist. I enjoy building predictive models, developing web applications, cooking, reading, and playing board games. For a living, I get to solve puzzles with data - Life is good.</p>
+<p>My name is Javier Orraca and I’m a data scientist. I enjoy building
+predictive models, developing web applications, cooking, reading, and
+playing board games. For a living, I get to solve puzzles with data -
+Life is good.</p>
 <h2 id="professional">Professional</h2>
-<p>My career includes over 15 years of data science, financial strategy, and business analytics for EY, PG&amp;E, KPMG, Health Net, and <a href="https://bloomreach.com/">Bloomreach</a>. At Bloomreach, my team applies data science techniques to weaponize data and empower decision makers with descriptive and prescriptive analytics. I help our business develop and deploy automation solutions, predictive algorithms, and interactive web apps for our internal leaders, Operations, Product, Marketing, and Sales teams.</p>
+<p>My career includes over 15 years of data science, financial strategy,
+and business analytics for EY, PG&amp;E, KPMG, Health Net, and <a
+href="https://bloomreach.com/">Bloomreach</a>. At Bloomreach, my team
+applies data science techniques to empower decision makers with
+descriptive and prescriptive analytics. I help our business develop and
+deploy automation solutions, predictive algorithms, and interactive web
+apps for our internal leaders, Operations, Product, Marketing, and Sales
+teams.</p>
 <h2 id="scatter-podcast">Scatter Podcast</h2>
-<p>In 2019, I launched <a href="https://soundcloud.com/scatterpodcast">Scatter Podcast</a> to share career tips and insights from data science leaders for students, business managers, and professionals looking to pivot into data science. It was a fun and incredibly rewarding side project but after 30 episodes, I started to feel fatigued with the amount of time it took to plan, record, edit, market, etc. The podcast is on hold <em>but not dead!</em></p>
-<h2 id="programming-analytics-skills">Programming &amp; Analytics Skills</h2>
+<p>In 2019, I launched <a
+href="https://soundcloud.com/scatterpodcast">Scatter Podcast</a> to
+share career tips and insights from data science leaders for students,
+business managers, and professionals looking to pivot into data science.
+It was a fun and incredibly rewarding side project but after 30
+episodes, I started to feel fatigued with the amount of time it took to
+plan, record, edit, market, etc. The podcast is on hold <em>but not
+dead!</em></p>
+<h2 id="programming-analytics-skills">Programming &amp; Analytics
+Skills</h2>
 <ul>
-<li><strong>R</strong>: RStudio pro tools, R Markdown, Shiny, tidyverse, tidymodels, distill, plotly, leaflet, fable, feasts, Facebook’s Prophet &amp; NeuralProphet R implementations, and many more</li>
-<li><strong>Other Analytics &amp; Programming Platforms</strong>: JupyterHub, Jupyter Lab, GitLab, GitHub, RStudio Connect, Julia, NetBase, SQL, SAP Business Objects, Hugo, Netlify, Quest Analytics</li>
-<li><strong>Microsoft</strong>: Expert-level MS Access and Excel user with experience creating pivot tables, nested IF statements, INDEX / MATCH functions, VLOOKUP / HLOOKUP functions, Solver (for optimization and simulations… yes… in Excel!), macros for data manipulation pipelines, ODBC integration, query design (joins, crosstab, make-table, etc.), reports, and forms</li>
+<li><strong>R</strong>: RStudio pro tools, R Markdown, Shiny, tidyverse,
+tidymodels, distill, plotly, leaflet, fable, feasts, Facebook’s Prophet
+&amp; NeuralProphet R implementations, and many more</li>
+<li><strong>Other Analytics &amp; Programming Platforms</strong>:
+JupyterHub, Jupyter Lab, GitLab, GitHub, RStudio Connect, Julia,
+NetBase, SQL, SAP Business Objects, Hugo, Netlify, Quest Analytics</li>
+<li><strong>Microsoft</strong>: Expert-level MS Access and Excel user
+with experience creating pivot tables, nested IF statements, INDEX /
+MATCH functions, VLOOKUP / HLOOKUP functions, Solver (for optimization
+and simulations… yes… in Excel!), macros for data manipulation
+pipelines, ODBC integration, query design (joins, crosstab, make-table,
+etc.), reports, and forms</li>
 </ul>
 <h2 id="media-appearances">Media Appearances</h2>
 <ul>
-<li>UC Irvine’s inaugural Latinx Initiative Conference (2021/10/15): <a href="https://merage.uci.edu/events/2021/10/2021-lxi-conference.html">https://merage.uci.edu/events/2021/10/2021-lxi-conference.html</a></li>
-<li>Data Points virtual conference hosted by Grid Dynamics (2021/06/09): <a href="https://datapoints.griddynamics.com/events/data-points-virtual-summit-healthcare-finance-06-09-2021/">https://datapoints.griddynamics.com/events/data-points-virtual-summit-healthcare-finance-06-09-2021/</a></li>
-<li>Scatter Podcast mention on Forbes: <a href="https://forbes.com/sites/louiscolumbus/2019/04/14/how-to-get-your-data-scientist-career-started">https://forbes.com/how-to-get-your-data-scientist-career-started</a></li>
-<li>Scatter Podcast on UC Irvine News: <a href="https://merage.uci.edu/news/2019/06/podcast-launched-by-merage-student-navigates-complex-field-of-data-analytics-and-science.html">https://merage.uci.edu/news/2019/06/scatterpodcast</a></li>
-<li>Orange County Predictive Modeling Hackathon Winner: <a href="https://twitter.com/oc_rug/status/1130553620456300544?s=20">https://twitter.com/oc_rug/status/oc-r-users-group-hackathon-best-model</a></li>
-<li>UC Irvine Student Profile: <a href="https://merage.uci.edu/programs/masters/master-science-business-analytics/curriculum.html">https://merage.uci.edu/programs/masters/master-science-business-analytics</a></li>
+<li>UC Irvine’s inaugural Latinx Initiative Conference (2021/10/15): <a
+href="https://merage.uci.edu/events/2021/10/2021-lxi-conference.html">https://merage.uci.edu/events/2021/10/2021-lxi-conference.html</a></li>
+<li>Data Points virtual conference hosted by Grid Dynamics (2021/06/09):
+<a
+href="https://datapoints.griddynamics.com/events/data-points-virtual-summit-healthcare-finance-06-09-2021/">https://datapoints.griddynamics.com/events/data-points-virtual-summit-healthcare-finance-06-09-2021/</a></li>
+<li>Scatter Podcast mention on Forbes: <a
+href="https://forbes.com/sites/louiscolumbus/2019/04/14/how-to-get-your-data-scientist-career-started">https://forbes.com/how-to-get-your-data-scientist-career-started</a></li>
+<li>Scatter Podcast on UC Irvine News: <a
+href="https://merage.uci.edu/news/2019/06/podcast-launched-by-merage-student-navigates-complex-field-of-data-analytics-and-science.html">https://merage.uci.edu/news/2019/06/scatterpodcast</a></li>
+<li>Orange County Predictive Modeling Hackathon Winner: <a
+href="https://twitter.com/oc_rug/status/1130553620456300544?s=20">https://twitter.com/oc_rug/status/oc-r-users-group-hackathon-best-model</a></li>
+<li>UC Irvine Student Profile: <a
+href="https://merage.uci.edu/programs/masters/master-science-business-analytics/curriculum.html">https://merage.uci.edu/programs/masters/master-science-business-analytics</a></li>
 </ul>
 <h2 id="full-stack-web-development">Full Stack Web Development</h2>
-<p>While not my primary professional focus, I am a proficient full stack web developer leveraging the R programming language and RStudio ecosystem. I develop and deploy client and server software including websites, APIs, and interactive web applications. For interactive, enterprise-grade web apps, <a href="https://shiny.rstudio.com/">R Shiny</a> is my framework of choice.</p>
-<p>Shiny allows me to build apps with clean UIs, advanced <a href="https://mastering-shiny.org/scaling-modules.html#scaling-modules">modules</a>, and I can easily inject <a href="https://shiny.rstudio.com/articles/tag-glossary.html">HTML</a>, <a href="https://engineering-shiny.org/css.html">CSS</a>, and <a href="https://deanattali.com/shinyjs/">JavaScript</a> for front-end customization. Recently, I’ve been learning the <a href="https://julialang.org/">Julia</a> programming language and <a href="https://genieframework.com/">Genie</a> web framework to augment my data science and app development workflows.</p>
-<p>This website was built with <a href="https://rstudio.github.io/distill/">Distill</a>, an R web publishing framework that feels intuitive and easy to use if you’re already familiar with R Markdown and <code>blogdown</code>. I host this site for free on GitHub, deploy using Netlify, and I pay $15/year for the domain name. Open-source tools are fast, flexible, fun, and the future of data science.</p>
+<p>While not my primary professional focus, I am a proficient full stack
+web developer leveraging the R programming language and RStudio
+ecosystem. I develop and deploy client and server software including
+websites, APIs, and interactive web applications. For interactive,
+enterprise-grade web apps, <a href="https://shiny.rstudio.com/">R
+Shiny</a> is my framework of choice.</p>
+<p>Shiny allows me to build apps with clean UIs, advanced <a
+href="https://mastering-shiny.org/scaling-modules.html#scaling-modules">modules</a>,
+and I can easily inject <a
+href="https://shiny.rstudio.com/articles/tag-glossary.html">HTML</a>, <a
+href="https://engineering-shiny.org/css.html">CSS</a>, and <a
+href="https://deanattali.com/shinyjs/">JavaScript</a> for front-end
+customization. Recently, I’ve been learning the <a
+href="https://julialang.org/">Julia</a> programming language and <a
+href="https://genieframework.com/">Genie</a> web framework to augment my
+data science and app development workflows.</p>
+<p>This website was built with <a
+href="https://rstudio.github.io/distill/">Distill</a>, an R web
+publishing framework that feels intuitive and easy to use if you’re
+already familiar with R Markdown and <code>blogdown</code>. I host this
+site for free on GitHub, deploy using Netlify, and I pay $15/year for
+the domain name. Open-source tools are fast, flexible, fun, and the
+future of data science.</p>
 <h2 id="contact-info-and-social">Contact Info and Social</h2>
 <ul>
-<li>LinkedIn: <a href="https://www.linkedin.com/in/orraca/">https://www.linkedin.com/in/orraca/</a></li>
-<li>Scatter Podcast on SoundCloud: <a href="https://soundcloud.com/scatterpodcast">https://soundcloud.com/scatterpodcast</a></li>
-<li>GitHub: <a href="https://github.com/JavOrraca">https://github.com/JavOrraca</a></li>
+<li>LinkedIn: <a
+href="https://www.linkedin.com/in/orraca/">https://www.linkedin.com/in/orraca/</a></li>
+<li>Scatter Podcast on SoundCloud: <a
+href="https://soundcloud.com/scatterpodcast">https://soundcloud.com/scatterpodcast</a></li>
+<li>GitHub: <a
+href="https://github.com/JavOrraca">https://github.com/JavOrraca</a></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
